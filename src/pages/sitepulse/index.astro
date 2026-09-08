@@ -128,7 +128,7 @@ const costDrivers = [
         </div>
 
         <div class="mt-16 border-y border-[#C9CFCC] py-12 lg:py-16">
-          <div class="grid items-center gap-8 lg:grid-cols-[0.9fr_5rem_0.7fr_7rem_1.15fr] lg:gap-6">
+          <div class="grid items-center gap-8 lg:grid-cols-[0.9fr_2rem_1.2fr_3rem_1.1fr] lg:gap-6">
             <div class="border border-[#C9CFCC] bg-white">
               <div class="border-b border-[#D9DDDA] px-5 py-4">
                 <p class="text-[10px] font-semibold uppercase tracking-[0.13em] text-[#68767A]">Måleenheter</p>
@@ -153,16 +153,13 @@ const costDrivers = [
               <div class="h-12 w-px bg-[#C9CFCC] lg:h-px lg:w-full"></div>
             </div>
 
-            <div class="mx-auto w-full max-w-[220px]">
-              <p class="mb-3 text-center text-[10px] font-semibold uppercase tracking-[0.13em] text-[#68767A]">SitePulse Gateway</p>
-              <div class="border border-[#30373A] bg-[#171A1C] p-4">
-                <div class="relative aspect-[0.9] border border-[#B9BFBC] bg-[#E9EAE7]">
-                  <div class="absolute inset-x-0 top-0 flex items-center justify-between border-b border-[#C5CAC7] px-3 py-3"><span class="text-[9px] font-bold uppercase tracking-[0.16em] text-[#30373A]">SitePulse</span><span class="h-2 w-2 bg-[#8BAA4A]"></span></div>
-                  <div class="absolute inset-x-5 top-1/2 -translate-y-1/2"><p class="text-[9px] uppercase tracking-[0.12em] text-[#68767A]">Status</p><p class="mt-1 text-sm font-semibold text-[#111315]">Online</p></div>
-                  <div class="absolute inset-x-0 bottom-0 border-t border-[#C5CAC7] px-3 py-3 text-[9px] uppercase tracking-[0.12em] text-[#68767A]">Gateway</div>
-                </div>
-              </div>
-            </div>
+            <figure class="mx-auto w-full max-w-[380px]">
+              <img src="/images/sitepulse-gateway-render-v2.png" width="1536" height="1024" alt="SitePulse Gateway i svart kapsling med gul pakning, ZiMO-etikett og festører" class="h-auto w-full mix-blend-multiply" loading="lazy" decoding="async" />
+              <figcaption class="mt-4 text-center">
+                <p class="text-sm font-semibold">SitePulse Gateway</p>
+                <p class="mt-1 text-xs text-[#68767A]">Tilkoblet Cloud via LTE</p>
+              </figcaption>
+            </figure>
 
             <div class="flex flex-col items-center gap-3">
               <p class="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#8B6500]">LTE</p>
@@ -317,10 +314,15 @@ const costDrivers = [
 
     <section id="felt" class="border-y border-[#D4D8D5] bg-white">
       <div class="grid lg:grid-cols-[1.08fr_0.92fr]">
-        <figure class="relative min-h-[460px] overflow-hidden lg:min-h-[620px]">
-          <img src="/images/sitepulse-construction-manager.png" alt="SitePulse-enhet montert på byggeplass mens prosjektdata følges på mobil" class="absolute inset-0 h-full w-full object-cover object-[66%_center]" loading="lazy" decoding="async" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#111315]/45 via-transparent to-transparent"></div>
-          <figcaption class="absolute bottom-0 left-0 border-t border-r border-white/20 bg-[#111315]/90 px-5 py-4 text-[10px] font-semibold uppercase tracking-[0.12em] text-white/68">Bygget for feltet</figcaption>
+        <figure class="flex flex-col justify-center border-b border-[#D4D8D5] px-5 py-12 sm:px-8 lg:border-b-0 lg:border-r lg:py-16">
+          <div class="mx-auto w-full max-w-[760px]">
+            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-[#68767A]">SitePulse Gateway</p>
+            <img src="/images/sitepulse-gateway-render-v2.png" width="1536" height="1024" alt="Produktrender av SitePulse Gateway med originaletikett, gul pakning og integrerte festører" class="mt-8 h-auto w-full" loading="lazy" decoding="async" />
+            <figcaption class="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-[#D4D8D5] pt-4 text-xs text-[#68767A]">
+              <span>På byggeplassen. Tilkoblet via LTE.</span>
+              <span>Produktillustrasjon</span>
+            </figcaption>
+          </div>
         </figure>
         <div class="flex items-center px-5 py-16 sm:px-8 lg:px-14 lg:py-20 xl:px-20">
           <div class="max-w-xl">

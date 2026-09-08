@@ -442,3 +442,20 @@ Denne retningen overstyrer den typografiske, sentrerte heroen.
 | 2026-08-30 | Førstevisningen prioriterer temperatur, varme på automatisk, LTE-status, brukt energi og estimert spart energi. | Viser hvordan måling, styring og økonomisk innsikt henger sammen. |
 | 2026-08-30 | Cloud-flaten bruker sammenhengende tabell-/panelstruktur med borders, ikke en samling flytende kort. | Gir et mer troverdig enterprise- og kontrollsystemuttrykk. |
 | 2026-08-30 | Alle tall i heroens produktvisning merkes som illustrative demo-data. | Unngår at eksempelverdier oppfattes som dokumenterte resultater. |
+
+
+## Gjeldende hardware-bilder – original CAD og etikett
+
+Denne avklaringen overstyrer tidligere føringer om å unngå produktrenderinger. Heroen beholder venstrejustert tekst og Cloud-eksempelet til høyre.
+
+| Dato | Beslutning | Begrunnelse |
+| --- | --- | --- |
+| 2026-09-09 | Bruk en realistisk render basert på brukerens CAD-modell, liggende i trekvart perspektiv. | Viser det faktiske produktdesignet med materialer og lys inspirert av Blender. |
+| 2026-09-09 | Behold originaletikettens innhold og ZiMO-merke. | Den forenklede etiketten med tomme felter ble avvist. |
+| 2026-09-09 | Produktformen skal bevare svart kapsling, gul pakningslinje og festører med hull og spor. | Unngår at genererte bilder endrer produktets identitet eller legger til funksjoner. |
+| 2026-09-09 | Vis renderen i systemforklaringen og i seksjonen om gjenbruk. | Gir det fysiske produktet plass ved siden av Cloud-visningen. |
+| 2026-09-09 | Bruk ren hvit bakgrunn; ekte transparent alfa er ønskelig for fremtidige eksportfiler. | Den genererte filen har hvit bakgrunn, ikke alfa. Inntegnede transparensruter skal aldri publiseres. |
+
+Aktiv bildefil: `public/images/sitepulse-gateway-render-v2.png` (1536 × 1024 PNG). Generert med innebygd imagegen fra brukerens fire CAD-referanser; dette er en produktillustrasjon, ikke et fotografi eller en eksport fra Blender. Små etikettelementer og QR-koden er illustrerte og skal ikke brukes som produksjons- eller skannegrunnlag.
+
+Prompt: Gjengi nøyaktig CAD-produkt i liggende trekvart perspektiv som en realistisk Blender/Cycles-inspirert produktrender, med komplett originaletikett, svart satinplast, gul pakningslinje og festører. Bevar logo og etikettens tekst. Ingen ekstra antenner eller porter. Transparent bakgrunn om mulig, ellers ren hvit. Bakgrunnen ble korrigert i en separat imagegen-redigering; resten av renderen ble bevart.
