@@ -5,13 +5,19 @@ interface Props {
   mobile?: boolean;
 }
 const { mobile = false } = Astro.props;
+const currentPath = Astro.url.pathname.replace(/\/$/, "");
+const activeProduct = products.find(
+  (product) => productHref(product).replace(/\/$/, "") === currentPath,
+);
 ---
 
 <details class:list={["product-menu relative text-white", { "px-3": mobile }]}>
   <summary
     class:list={[
       "flex cursor-pointer list-none items-center gap-2 rounded-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-4",
-      mobile ? "py-3" : "py-2",
+      mobile ? "py-3" : "min-h-10 border-b-2 py-2",
+      activeProduct ? "border-brand text-brand" : "border-transparent",
+      { "underline decoration-brand decoration-2 underline-offset-8": mobile && activeProduct },
     ]}
   >
     Produkter
@@ -36,7 +42,11 @@ const { mobile = false } = Astro.props;
       <li>
         <a
           href={productHref(product)}
-          class="flex flex-wrap items-center gap-2 rounded-sm px-3 py-3 font-medium transition-colors hover:bg-[#fff8cc]"
+          aria-current={product === activeProduct ? "page" : undefined}
+          class:list={[
+            "flex flex-wrap items-center gap-2 rounded-sm border-l-2 px-3 py-3 font-medium transition-colors hover:bg-[#fff8cc]",
+            product === activeProduct ? "border-brand bg-[#fff8cc]" : "border-transparent",
+          ]}
         >
           <span>{product.label}</span>
           {product.comingSoon && (

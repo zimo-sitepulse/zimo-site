@@ -1,5 +1,6 @@
 ---
 import ProductMenu from "./ProductMenu.astro";
+import NavLink from "./NavLink.astro";
 import { site } from "../data/site";
 ---
 
@@ -19,10 +20,9 @@ import { site } from "../data/site";
       class="hidden items-center gap-5 text-[13px] font-medium text-white/62 lg:flex"
       aria-label="Hovednavigasjon"
     >
+      <NavLink href={site.home}>Hovedside</NavLink>
       <ProductMenu />
-      <a href={site.contact} class="cursor-pointer transition-colors duration-200 hover:text-white">
-        Kontakt oss
-      </a>
+      <NavLink href={site.contact}>Kontakt oss</NavLink>
     </nav>
 
     <div class="hidden items-center gap-5 lg:flex">
@@ -75,13 +75,13 @@ import { site } from "../data/site";
       class="grid border border-white/10 bg-[#1B1F23] p-2 text-sm text-white"
       aria-label="Mobilnavigasjon"
     >
+      <NavLink href={site.home} mobile>
+        Hovedside
+      </NavLink>
       <ProductMenu mobile />
-      <a
-        href={site.contact}
-        class="rounded-[7px] px-3 py-3 font-medium text-white/70 transition-colors duration-200 hover:bg-white/10 hover:text-white"
-      >
+      <NavLink href={site.contact} mobile>
         Kontakt oss
-      </a>
+      </NavLink>
       <a
         href={site.cloud}
         target="_blank"

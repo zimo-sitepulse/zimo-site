@@ -1,0 +1,23 @@
+---
+interface Props {
+  href: string;
+  mobile?: boolean;
+}
+
+const { href, mobile = false } = Astro.props;
+const active = Astro.url.pathname.replace(/\/$/, "") === href.replace(/\/$/, "");
+---
+
+<a
+  href={href}
+  aria-current={active ? "page" : undefined}
+  class:list={[
+    "cursor-pointer font-medium transition-colors duration-200",
+    mobile ? "rounded-[7px] border-l-2 px-3 py-3" : "inline-flex min-h-10 items-center border-b-2",
+    active
+      ? "border-brand text-brand" + (mobile ? " bg-white/5" : "")
+      : "border-transparent text-white/70 hover:text-white" + (mobile ? " hover:bg-white/10" : ""),
+  ]}
+>
+  <slot />
+</a>
