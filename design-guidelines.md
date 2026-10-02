@@ -20,6 +20,7 @@ Disse brukerbestemte endringene går foran tidligere føringer i dokumentet:
 - ZiMO-logoen står alene i toppmeny og bunntekst, med gul prikk og uten SitePulse-tekst ved siden av.
 - Merkevarens gulfarge er `#FFD600`.
 - Forsiden setter SitePulse-systemet i sentrum gjennom datainnsamling, kostnadsbesparelser og automatisk dokumentasjon.
+- Cloud-demoen er fjernet fra forsiden fordi den ikke gjenspeiler SitePulse Cloud. Seksjonen viser kun de tre stegene, uten skjermbilde eller illustrert grensesnitt.
 - Menyen består av Produkter, Kontakt oss, Åpne Cloud og Bli kunde. Systemet, Automasjon, Dokumentasjon og Pris er fjernet som menypunkter og separate fordypningsseksjoner.
 - Produktene har egne sider under `/produkter/`, inkludert to kommende fuktighetsmålere.
 - Kontakt oss har egen side på `/kontakt/`. Bli kunde peker til denne sidens kundeseksjon med tydelig e-postkontakt.
