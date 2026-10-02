@@ -6,11 +6,20 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check": "astro check",
+    "format": "prettier --write src package.json astro.config.mjs tsconfig.json .prettierrc.json README.md",
+    "format:check": "prettier --check src package.json astro.config.mjs tsconfig.json .prettierrc.json README.md"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.17.1",
     "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "prettier": "^3.9.9",
+    "prettier-plugin-astro": "^1.1.0",
+    "typescript": "^5.9.3"
   }
 }

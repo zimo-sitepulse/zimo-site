@@ -1,5 +1,6 @@
 ---
-const destination = "/sitepulse/";
+import { site } from "../data/site";
+const destination = site.home;
 ---
 
 <!doctype html>
@@ -7,14 +8,16 @@ const destination = "/sitepulse/";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="refresh" content="0; url=/sitepulse/" />
-    <link rel="canonical" href="https://zimo.no/sitepulse/" />
+    <meta http-equiv="refresh" content={`0; url=${destination}`} />
+    <link rel="canonical" href={new URL(destination, site.url)} />
     <title>SitePulse - ZiMO</title>
-    <script is:inline>
-      window.location.replace("/sitepulse/");
+    <script is:inline define:vars={{ destination }}>
+      window.location.replace(destination);
     </script>
   </head>
   <body>
-    <p>Du blir sendt videre til <a href={destination}>SitePulse</a>.</p>
+    <p>
+      Du blir sendt videre til <a href={destination}>SitePulse</a>.
+    </p>
   </body>
 </html>

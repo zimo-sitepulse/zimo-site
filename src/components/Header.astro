@@ -1,65 +1,105 @@
 ---
 import ProductMenu from "./ProductMenu.astro";
-const nav = [
-  { label: "Kontakt oss", href: "/kontakt/" },
-];
-const cloudUrl = "https://sitepulse.zimo.no";
+import { site } from "../data/site";
 ---
 
-<header class="sticky top-0 z-50 border-b border-white/10 bg-[#111315] text-white">
+<header data-site-header class="sticky top-0 z-50 border-b border-white/10 bg-[#111315] text-white">
   <div class="zimo-shell flex h-[4.75rem] items-center justify-between">
-    <a href="/sitepulse/" class="flex min-h-11 items-center" aria-label="ZiMO hjem">
-      <img src="/brand/ZiMO_full_white.svg" alt="ZiMO" class="h-9 w-auto" loading="eager" decoding="async" />
+    <a href={site.home} class="flex min-h-11 items-center" aria-label="ZiMO hjem">
+      <img
+        src="/brand/ZiMO_full_white.svg"
+        alt="ZiMO"
+        class="h-9 w-auto"
+        loading="eager"
+        decoding="async"
+      />
     </a>
 
-    <nav class="hidden items-center gap-5 text-[13px] font-medium text-white/62 lg:flex" aria-label="Hovednavigasjon">
+    <nav
+      class="hidden items-center gap-5 text-[13px] font-medium text-white/62 lg:flex"
+      aria-label="Hovednavigasjon"
+    >
       <ProductMenu />
-      {nav.map((item) => <a href={item.href} class="cursor-pointer transition-colors duration-200 hover:text-white">{item.label}</a>)}
+      <a href={site.contact} class="cursor-pointer transition-colors duration-200 hover:text-white">
+        Kontakt oss
+      </a>
     </nav>
 
     <div class="hidden items-center gap-5 lg:flex">
-      <a href={cloudUrl} target="_blank" rel="noreferrer" class="cursor-pointer text-[13px] font-medium text-white/62 transition-colors duration-200 hover:text-white">Åpne Cloud</a>
-      <a href="/kontakt/#bli-kunde" class="inline-flex min-h-10 cursor-pointer items-center justify-center rounded-[8px] bg-[#FFD600] px-4 py-2.5 text-[13px] font-semibold text-[#111315] transition-colors duration-200 hover:bg-[#ffe34d]">Bli kunde</a>
+      <a
+        href={site.cloud}
+        target="_blank"
+        rel="noreferrer"
+        class="cursor-pointer text-[13px] font-medium text-white/62 transition-colors duration-200 hover:text-white"
+      >
+        Åpne Cloud
+      </a>
+      <a
+        href={site.becomeCustomer}
+        class="inline-flex min-h-10 cursor-pointer items-center justify-center rounded-[8px] bg-brand px-4 py-2.5 text-[13px] font-semibold text-[#111315] transition-colors duration-200 hover:bg-brand-hover"
+      >
+        Bli kunde
+      </a>
     </div>
 
-    <button class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-[8px] border border-white/20 text-white transition-colors duration-200 hover:border-white/45 hover:bg-white/10 lg:hidden" type="button" aria-label="Åpne meny" aria-expanded="false" aria-controls="mobile-menu" data-mobile-toggle>
-      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16" /><path d="M4 12h16" /><path d="M4 17h16" /></svg>
+    <button
+      class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-[8px] border border-white/20 text-white transition-colors duration-200 hover:border-white/45 hover:bg-white/10 lg:hidden"
+      type="button"
+      aria-label="Åpne meny"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      data-mobile-toggle
+    >
+      <svg
+        class="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linecap="round"
+        aria-hidden="true"
+      >
+        <path d="M4 7h16" />
+        <path d="M4 12h16" />
+        <path d="M4 17h16" />
+      </svg>
     </button>
   </div>
 
-  <div class="zimo-shell hidden border-t border-white/10 pb-4 pt-3 lg:hidden" id="mobile-menu" data-mobile-menu data-open="false">
-    <nav class="grid border border-white/10 bg-[#1B1F23] p-2 text-sm text-white" aria-label="Mobilnavigasjon">
+  <div
+    class="zimo-shell hidden border-t border-white/10 pb-4 pt-3 lg:hidden"
+    id="mobile-menu"
+    data-mobile-menu
+  >
+    <nav
+      class="grid border border-white/10 bg-[#1B1F23] p-2 text-sm text-white"
+      aria-label="Mobilnavigasjon"
+    >
       <ProductMenu mobile />
-      {nav.map((item) => <a href={item.href} class="rounded-[7px] px-3 py-3 font-medium text-white/70 transition-colors duration-200 hover:bg-white/10 hover:text-white">{item.label}</a>)}
-      <a href={cloudUrl} target="_blank" rel="noreferrer" class="rounded-[7px] px-3 py-3 font-medium text-[#FFD600] transition-colors duration-200 hover:bg-white/10">Åpne Cloud</a>
-      <a href="/kontakt/#bli-kunde" class="rounded-[7px] bg-[#FFD600] px-3 py-3 font-semibold text-[#111315]">Bli kunde</a>
+      <a
+        href={site.contact}
+        class="rounded-[7px] px-3 py-3 font-medium text-white/70 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+      >
+        Kontakt oss
+      </a>
+      <a
+        href={site.cloud}
+        target="_blank"
+        rel="noreferrer"
+        class="rounded-[7px] px-3 py-3 font-medium text-brand transition-colors duration-200 hover:bg-white/10"
+      >
+        Åpne Cloud
+      </a>
+      <a
+        href={site.becomeCustomer}
+        class="rounded-[7px] bg-brand px-3 py-3 font-semibold text-[#111315]"
+      >
+        Bli kunde
+      </a>
     </nav>
   </div>
 
-  <script is:inline>
-    (() => {
-      const toggle = document.querySelector("[data-mobile-toggle]");
-      const menu = document.querySelector("[data-mobile-menu]");
-      if (!toggle || !menu) return;
-      const setOpen = (open) => {
-        menu.dataset.open = open ? "true" : "false";
-        toggle.setAttribute("aria-expanded", open ? "true" : "false");
-        menu.classList.toggle("hidden", !open);
-      };
-      menu.addEventListener("click", (event) => {
-        if (event.target instanceof Element && event.target.closest("a")) setOpen(false);
-      });
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && menu.dataset.open === "true") {
-          setOpen(false);
-          toggle.focus();
-        }
-      });
-      setOpen(false);
-      toggle.addEventListener("click", () => setOpen(menu.dataset.open !== "true"));
-      document.addEventListener("click", (event) => {
-        if (event.target instanceof Element && !event.target.closest("[data-mobile-menu]") && !event.target.closest("[data-mobile-toggle]")) setOpen(false);
-      });
-    })();
+  <script>
+    import "../scripts/navigation";
   </script>
 </header>

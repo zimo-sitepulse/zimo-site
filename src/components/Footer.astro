@@ -1,27 +1,70 @@
+---
+import { site, socialLinks } from "../data/site";
+---
+
 <footer class="border-t border-white/10 bg-[#111315] text-white">
   <div class="zimo-shell grid gap-12 py-14 md:grid-cols-[1.15fr_0.85fr]">
     <div>
-      <a href="/sitepulse/" class="inline-flex items-center gap-3" aria-label="ZiMO hjem">
-        <img src="/brand/ZiMO_full_white.svg" alt="ZiMO" class="h-6 w-auto" loading="lazy" decoding="async" />
+      <a href={site.home} class="inline-flex items-center gap-3" aria-label="ZiMO hjem">
+        <img
+          src="/brand/ZiMO_full_white.svg"
+          alt="ZiMO"
+          class="h-6 w-auto"
+          loading="lazy"
+          decoding="async"
+        />
       </a>
-      <p class="mt-5 max-w-md text-sm leading-relaxed text-white/52">Et industrielt kontrollsystem for overvåkning, dokumentasjon og automatisk styring på byggeplassen.</p>
+      <p class="mt-5 max-w-md text-sm leading-relaxed text-white/52">
+        Et industrielt kontrollsystem for overvåkning, dokumentasjon og automatisk styring på
+        byggeplassen.
+      </p>
       <p class="mt-5 text-xs text-white/32">Sensorer → gateway → cloud → handling</p>
-      <nav class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/70" aria-label="Sosiale medier">
-        <a href="https://www.facebook.com/zimooas/" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 items-center transition-colors duration-200 hover:text-[#FFD600]">Facebook<span class="sr-only"> (åpnes i ny fane)</span></a>
-        <a href="https://www.instagram.com/zimoas/" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 items-center transition-colors duration-200 hover:text-[#FFD600]">Instagram<span class="sr-only"> (åpnes i ny fane)</span></a>
-        <a href="https://www.linkedin.com/company/94825200/" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 items-center transition-colors duration-200 hover:text-[#FFD600]">LinkedIn<span class="sr-only"> (åpnes i ny fane)</span></a>
+      <nav
+        class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/70"
+        aria-label="Sosiale medier"
+      >
+        {socialLinks.map((link) => (
+          <a
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex min-h-11 items-center transition-colors duration-200 hover:text-brand"
+          >
+            {link.label}
+            <span class="sr-only"> (åpnes i ny fane)</span>
+          </a>
+        ))}
       </nav>
     </div>
-    <nav class="grid content-start gap-3 text-sm text-white/58 md:grid-cols-2 md:gap-x-10 md:justify-self-end" aria-label="Footer">
-      <a class="transition-colors duration-200 hover:text-white" href="/sitepulse/">SitePulse</a>
-      <a class="transition-colors duration-200 hover:text-white" href="/kontakt/">Kontakt oss</a>
-      <a class="transition-colors duration-200 hover:text-white" href="/kontakt/#bli-kunde">Bli kunde</a>
-      <a class="transition-colors duration-200 hover:text-white" href="https://sitepulse.zimo.no" target="_blank" rel="noreferrer">Åpne Cloud</a>
+    <nav
+      class="grid content-start gap-3 text-sm text-white/58 md:grid-cols-2 md:gap-x-10 md:justify-self-end"
+      aria-label="Footer"
+    >
+      <a class="transition-colors duration-200 hover:text-white" href={site.home}>
+        SitePulse
+      </a>
+      <a class="transition-colors duration-200 hover:text-white" href={site.contact}>
+        Kontakt oss
+      </a>
+      <a class="transition-colors duration-200 hover:text-white" href={site.becomeCustomer}>
+        Bli kunde
+      </a>
+      <a
+        class="transition-colors duration-200 hover:text-white"
+        href={site.cloud}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Åpne Cloud
+      </a>
     </nav>
   </div>
   <div class="border-t border-white/10">
     <div class="zimo-shell flex flex-wrap items-center gap-2 py-5 text-xs text-white/32">
-      <span>© {new Date().getFullYear()} ZiMO</span><span aria-hidden="true">/</span><img src="/flags/no.svg" alt="Norge" class="h-3 w-auto" loading="lazy" decoding="async" /><span>Utviklet i Norge</span>
+      <span>© {new Date().getFullYear()} ZiMO</span>
+      <span aria-hidden="true">/</span>
+      <img src="/flags/no.svg" alt="Norge" class="h-3 w-auto" loading="lazy" decoding="async" />
+      <span>Utviklet i Norge</span>
     </div>
   </div>
 </footer>

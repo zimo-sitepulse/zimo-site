@@ -1,58 +1,147 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
+import { site } from "../../data/site";
+import Layout from "../../layouts/Layout.astro";
 
 const benefits = [
-  { number: "01", title: "Samle data.", text: "Temperatur, luftfuktighet og status fra byggeplassen samles i SitePulse Cloud. Se hva som skjer, uten å være overalt selv." },
-  { number: "02", title: "Reduser kostnader.", text: "Bruk målingene til å styre etter behov, begrense unødvendig energibruk og redusere tiden brukt på manuell oppfølging." },
-  { number: "03", title: "Dokumenter automatisk.", text: "Målinger og hendelser logges løpende. Historikken er samlet når dere trenger den, gjennom hele prosjektet." },
+  {
+    number: "01",
+    title: "Samle data.",
+    text: "Temperatur, luftfuktighet og status fra byggeplassen samles i SitePulse Cloud. Se hva som skjer, uten å være overalt selv.",
+  },
+  {
+    number: "02",
+    title: "Reduser kostnader.",
+    text: "Bruk målingene til å styre etter behov, begrense unødvendig energibruk og redusere tiden brukt på manuell oppfølging.",
+  },
+  {
+    number: "03",
+    title: "Dokumenter automatisk.",
+    text: "Målinger og hendelser logges løpende. Historikken er samlet når dere trenger den, gjennom hele prosjektet.",
+  },
 ];
 ---
-<BaseLayout title="SitePulse fra ZiMO – data, besparelser og automatisk dokumentasjon" description="SitePulse samler data fra byggeplassen, hjelper dere å redusere kostnader og automatiserer dokumentasjonen. Ta kontakt med ZiMO for å bli kunde.">
-  <Header />
-  <main id="main-content">
-    <section class="overflow-hidden bg-[#111315] pb-16 pt-16 text-white sm:pt-24 lg:pb-20 lg:pt-28">
-      <div class="zimo-shell">
-        <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-white/65"><span class="h-2 w-2 rounded-full bg-[#FFD600]" aria-hidden="true"></span>SitePulse fra ZiMO</p>
-        <h1 class="mt-8 max-w-5xl text-[clamp(2.6rem,6.5vw,6rem)] font-semibold leading-[1.04] tracking-[-0.05em]">Data som gir oversikt.<br />Oversikt som <span class="text-[#FFD600]">lønner seg.</span></h1>
-        <div class="mt-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-          <p class="max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl">SitePulse samler data fra byggeplassen, hjelper dere å spare penger og dokumenterer automatisk. Mindre manuell oppfølging. Mer kontroll gjennom hele prosjektet.</p>
-          <div class="flex flex-wrap gap-3 lg:justify-end">
-            <a href="/kontakt/#bli-kunde" class="inline-flex min-h-12 items-center justify-center gap-8 rounded-[8px] bg-[#FFD600] px-6 py-3.5 text-sm font-semibold text-[#111315] transition-colors hover:bg-[#ffe34d]">Bli kunde <span aria-hidden="true">↗</span></a>
-            <a href="#slik-fungerer-det" class="inline-flex min-h-12 items-center justify-center rounded-[8px] border border-white/30 px-6 py-3.5 text-sm font-medium transition-colors hover:bg-white/10">Se hvordan det fungerer</a>
-          </div>
+
+<Layout
+  title="SitePulse fra ZiMO – data, besparelser og automatisk dokumentasjon"
+  description="SitePulse samler data fra byggeplassen, hjelper dere å redusere kostnader og automatiserer dokumentasjonen. Ta kontakt med ZiMO for å bli kunde."
+>
+  <section class="overflow-hidden bg-[#111315] pb-16 pt-16 text-white sm:pt-24 lg:pb-20 lg:pt-28">
+    <div class="zimo-shell">
+      <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-white/65">
+        <span class="h-2 w-2 rounded-full bg-brand" aria-hidden="true"></span>SitePulse fra ZiMO
+      </p>
+      <h1 class="mt-8 max-w-5xl text-[clamp(2.6rem,6.5vw,6rem)] font-semibold leading-[1.04] tracking-[-0.05em]">
+        Data som gir oversikt.
+        <br />
+        Oversikt som <span class="text-brand">lønner seg.</span>
+      </h1>
+      <div class="mt-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+        <p class="max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl">
+          SitePulse samler data fra byggeplassen, hjelper dere å spare penger og dokumenterer
+          automatisk. Mindre manuell oppfølging. Mer kontroll gjennom hele prosjektet.
+        </p>
+        <div class="flex flex-wrap gap-3 lg:justify-end">
+          <a
+            href={site.becomeCustomer}
+            class="inline-flex min-h-12 items-center justify-center gap-8 rounded-[8px] bg-brand px-6 py-3.5 text-sm font-semibold text-[#111315] transition-colors hover:bg-brand-hover"
+          >
+            Bli kunde <span aria-hidden="true">↗</span>
+          </a>
+          <a
+            href="#slik-fungerer-det"
+            class="inline-flex min-h-12 items-center justify-center rounded-[8px] border border-white/30 px-6 py-3.5 text-sm font-medium transition-colors hover:bg-white/10"
+          >
+            Se hvordan det fungerer
+          </a>
         </div>
-        <div class="mt-16 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-6 text-xs font-medium text-white/60 lg:mt-20"><span>Samlet i SitePulse Cloud</span><span>Løpende datainnsamling</span><span>Automatisk historikk</span></div>
       </div>
-    </section>
-
-    <section class="border-b border-[#D4D8D5] bg-[#F5F5F2] py-16 lg:py-24" aria-label="Hva SitePulse gjør for dere">
-      <div class="zimo-shell grid gap-12 md:grid-cols-3 md:gap-8">
-        {benefits.map((item) => <article><p class="text-xs font-semibold text-[#68767A]">{item.number}</p><h2 class="mt-5 text-2xl font-semibold tracking-[-0.03em] lg:text-3xl">{item.title}</h2><p class="mt-4 max-w-md text-base leading-relaxed text-[#566267]">{item.text}</p></article>)}
+      <div class="mt-16 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-6 text-xs font-medium text-white/60 lg:mt-20">
+        <span>Samlet i SitePulse Cloud</span>
+        <span>Løpende datainnsamling</span>
+        <span>Automatisk historikk</span>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="slik-fungerer-det" class="bg-[#1B1F23] py-16 text-white lg:py-24">
-      <div class="zimo-shell">
-        <div class="mb-12 grid gap-8 lg:grid-cols-2 lg:items-end">
-          <div><p class="zimo-eyebrow text-[#FFD600]">Fra byggeplassen til beslutningen</p><h2 class="mt-5 max-w-xl text-4xl font-semibold leading-[1.08] tracking-[-0.04em] sm:text-5xl">Ett sted å følge<br />hele prosjektet.</h2></div>
-          <p class="max-w-lg text-lg leading-relaxed text-white/70 lg:justify-self-end">Utstyret samler inn data. Gatewayen sender dem til Cloud. Dere får oversikt, varsler og dokumentasjon i nettleseren, på kontoret eller i felt.</p>
+  <section
+    class="border-b border-[#D4D8D5] bg-[#F5F5F2] py-16 lg:py-24"
+    aria-label="Hva SitePulse gjør for dere"
+  >
+    <div class="zimo-shell grid gap-12 md:grid-cols-3 md:gap-8">
+      {benefits.map((item) => (
+        <article>
+          <p class="text-xs font-semibold text-[#68767A]">{item.number}</p>
+          <h2 class="mt-5 text-2xl font-semibold tracking-[-0.03em] lg:text-3xl">{item.title}</h2>
+          <p class="mt-4 max-w-md text-base leading-relaxed text-[#566267]">{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section id="slik-fungerer-det" class="bg-[#1B1F23] py-16 text-white lg:py-24">
+    <div class="zimo-shell">
+      <div class="mb-12 grid gap-8 lg:grid-cols-2 lg:items-end">
+        <div>
+          <p class="zimo-eyebrow text-brand">Fra byggeplassen til beslutningen</p>
+          <h2 class="mt-5 max-w-xl text-4xl font-semibold leading-[1.08] tracking-[-0.04em] sm:text-5xl">
+            Ett sted å følge
+            <br />
+            hele prosjektet.
+          </h2>
         </div>
-        <ol class="grid gap-8 md:grid-cols-3">
-            <li class="border-t border-white/20 pt-5"><span class="text-xs text-[#FFD600]">01 / På byggeplassen</span><h3 class="mt-3 text-xl font-semibold">Data samles inn.</h3><p class="mt-3 max-w-md text-sm leading-relaxed text-white/65">Sensorer og tilkoblet utstyr følger forholdene der jobben skjer.</p></li>
-            <li class="border-t border-white/20 pt-5"><span class="text-xs text-[#FFD600]">02 / I SitePulse Cloud</span><h3 class="mt-3 text-xl font-semibold">Oversikten oppdateres.</h3><p class="mt-3 max-w-md text-sm leading-relaxed text-white/65">Gatewayen sender målingene videre via LTE, slik at teamet kan følge prosjektet.</p></li>
-            <li class="border-t border-white/20 pt-5"><span class="text-xs text-[#FFD600]">03 / Gjennom prosjektet</span><h3 class="mt-3 text-xl font-semibold">Historikken følger med.</h3><p class="mt-3 max-w-md text-sm leading-relaxed text-white/65">Se utviklingen, følg opp avvik og bruk dokumentasjonen når dere trenger den.</p></li>
-        </ol>
+        <p class="max-w-lg text-lg leading-relaxed text-white/70 lg:justify-self-end">
+          Utstyret samler inn data. Gatewayen sender dem til Cloud. Dere får oversikt, varsler og
+          dokumentasjon i nettleseren, på kontoret eller i felt.
+        </p>
       </div>
-    </section>
+      <ol class="grid gap-8 md:grid-cols-3">
+        <li class="border-t border-white/20 pt-5">
+          <span class="text-xs text-brand">01 / På byggeplassen</span>
+          <h3 class="mt-3 text-xl font-semibold">Data samles inn.</h3>
+          <p class="mt-3 max-w-md text-sm leading-relaxed text-white/65">
+            Sensorer og tilkoblet utstyr følger forholdene der jobben skjer.
+          </p>
+        </li>
+        <li class="border-t border-white/20 pt-5">
+          <span class="text-xs text-brand">02 / I SitePulse Cloud</span>
+          <h3 class="mt-3 text-xl font-semibold">Oversikten oppdateres.</h3>
+          <p class="mt-3 max-w-md text-sm leading-relaxed text-white/65">
+            Gatewayen sender målingene videre via LTE, slik at teamet kan følge prosjektet.
+          </p>
+        </li>
+        <li class="border-t border-white/20 pt-5">
+          <span class="text-xs text-brand">03 / Gjennom prosjektet</span>
+          <h3 class="mt-3 text-xl font-semibold">Historikken følger med.</h3>
+          <p class="mt-3 max-w-md text-sm leading-relaxed text-white/65">
+            Se utviklingen, følg opp avvik og bruk dokumentasjonen når dere trenger den.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
 
-    <section class="bg-[#FFD600] py-16 lg:py-24">
-      <div class="zimo-shell grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-        <div><p class="zimo-eyebrow text-[#584A00]">Bli kunde</p><h2 class="mt-5 max-w-2xl text-4xl font-semibold leading-[1.08] tracking-[-0.04em] sm:text-5xl">Hva vil dere få<br />bedre kontroll på?</h2></div>
-        <div><p class="max-w-md text-lg leading-relaxed text-[#443B0C]">Fortell oss om byggeplassen og behovet deres. Sammen finner vi et oppsett som passer prosjektet.</p><a href="/kontakt/#bli-kunde" class="mt-7 inline-flex min-h-12 items-center justify-center gap-8 rounded-[8px] bg-[#111315] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#30373A]">La oss ta en prat <span aria-hidden="true">↗</span></a></div>
+  <section class="bg-brand py-16 lg:py-24">
+    <div class="zimo-shell grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+      <div>
+        <p class="zimo-eyebrow text-[#584A00]">Bli kunde</p>
+        <h2 class="mt-5 max-w-2xl text-4xl font-semibold leading-[1.08] tracking-[-0.04em] sm:text-5xl">
+          Hva vil dere få
+          <br />
+          bedre kontroll på?
+        </h2>
       </div>
-    </section>
-  </main>
-  <Footer />
-</BaseLayout>
+      <div>
+        <p class="max-w-md text-lg leading-relaxed text-[#443B0C]">
+          Fortell oss om byggeplassen og behovet deres. Sammen finner vi et oppsett som passer
+          prosjektet.
+        </p>
+        <a
+          href={site.becomeCustomer}
+          class="mt-7 inline-flex min-h-12 items-center justify-center gap-8 rounded-[8px] bg-[#111315] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#30373A]"
+        >
+          La oss ta en prat <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

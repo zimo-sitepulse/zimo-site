@@ -1,6 +1,11 @@
 ---
 import "../styles/global.css";
 
+interface Props {
+  title?: string;
+  description?: string;
+}
+
 const {
   title = "SitePulse - lavere kostnader på byggeplassen",
   description = "SitePulse gir entreprenører bedre kontroll på byggeplassen gjennom automatisk overvåkning, dokumentasjon og styring.",
@@ -34,7 +39,9 @@ const {
     <link rel="icon" href="/favicon.ico" sizes="any" />
   </head>
   <body>
-    <a class="zimo-skip-link" href="#main-content">Hopp til hovedinnhold</a>
+    <a class="zimo-skip-link" href="#main-content">
+      Hopp til hovedinnhold
+    </a>
     <slot />
   </body>
 </html>
