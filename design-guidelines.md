@@ -13,9 +13,21 @@ Denne filen samler beslutninger som skal holde nettside, dashboard, gateway og �
 
 Kilde: `/Users/madsfalk/Downloads/sitepulse-ui-design-brief.md`.
 
+## Gjeldende beslutninger – 2026-10-03
+
+Disse brukerbestemte endringene går foran tidligere føringer i dokumentet:
+
+- ZiMO-logoen står alene i toppmeny og bunntekst, med gul prikk og uten SitePulse-tekst ved siden av.
+- Merkevarens gulfarge er `#FFD600`.
+- Forsiden setter SitePulse-systemet i sentrum gjennom datainnsamling, kostnadsbesparelser og automatisk dokumentasjon.
+- Menyen består av Produkter, Kontakt oss, Åpne Cloud og Bli kunde. Systemet, Automasjon, Dokumentasjon og Pris er fjernet som menypunkter og separate fordypningsseksjoner.
+- Produktene har egne sider under `/produkter/`, inkludert to kommende fuktighetsmålere.
+- Kontakt oss har egen side på `/kontakt/`. Bli kunde peker til denne sidens kundeseksjon med tydelig e-postkontakt.
+- Facebook, Instagram og LinkedIn ligger i bunnteksten.
+
 ## Status
 
-- **Sist oppdatert:** 2026-08-30
+- **Sist oppdatert:** 2026-10-03
 - **Status:** Grunnsystem etablert; detaljer kan finjusteres når ekte produktdata, hardware-bilder og pilotresultater blir tilgjengelige.
 - **Stack:** Astro + Tailwind CSS v4
 - **Primært språk:** Norsk bokmål

@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+<BaseLayout title="Kontakt oss – ZiMO" description="Vil dere bli kunde eller vite mer om SitePulse? Kontakt ZiMO og fortell oss om byggeplassen og behovene deres.">
+  <Header />
+  <main id="main-content">
+    <section class="bg-[#111315] py-16 text-white lg:py-24">
+      <div class="zimo-shell">
+        <p class="zimo-eyebrow text-[#FFD600]">Kontakt oss</p>
+        <h1 class="mt-6 max-w-3xl text-5xl font-semibold leading-[1.04] tracking-[-0.045em] sm:text-6xl lg:text-7xl">En god løsning starter<br />med en samtale.</h1>
+        <p class="mt-7 max-w-xl text-lg leading-relaxed text-white/70">Vil dere komme i gang med SitePulse, eller har dere et spørsmål? Vi hører gjerne fra dere.</p>
+      </div>
+    </section>
+    <section class="bg-[#F5F5F2] py-16 lg:py-24">
+      <div class="zimo-shell grid gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:gap-20">
+        <div id="bli-kunde">
+          <p class="zimo-eyebrow">Bli kunde</p>
+          <h2 class="mt-5 text-3xl font-semibold leading-[1.12] tracking-[-0.035em] sm:text-4xl">Fortell oss hva dere trenger.</h2>
+          <p class="mt-5 max-w-xl text-lg leading-relaxed text-[#566267]">Vi tar utgangspunkt i byggeplassen deres og finner et oppsett som passer. Send oss gjerne noen ord om:</p>
+          <ul class="mt-7 space-y-4 text-base text-[#566267]">
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#8B7500]" aria-hidden="true"></span>Hvilket prosjekt eller firma dere tar kontakt på vegne av.</li>
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#8B7500]" aria-hidden="true"></span>Hva dere ønsker å måle, styre eller dokumentere.</li>
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#8B7500]" aria-hidden="true"></span>Når dere ønsker å komme i gang.</li>
+          </ul>
+          <a href="mailto:mads.falk@zimo.no?subject=Vi%20vil%20bli%20kunde%20hos%20ZiMO" class="mt-9 inline-flex min-h-12 items-center justify-center gap-8 rounded-[8px] bg-[#FFD600] px-6 py-3.5 text-sm font-semibold text-[#111315] transition-colors hover:bg-[#ffe34d]">Send oss en e-post <span aria-hidden="true">↗</span></a>
+          <p class="mt-3 text-sm text-[#566267]">Åpner e-postprogrammet ditt.</p>
+        </div>
+        <aside class="border-t border-[#C9CFCC] pt-7 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0" aria-label="Kontaktinformasjon">
+          <h2 class="text-xl font-semibold">Ta kontakt direkte</h2>
+          <p class="mt-6 font-medium">Mads Falk</p>
+          <p class="mt-1 text-sm text-[#566267]">ZiMO</p>
+          <a href="mailto:mads.falk@zimo.no" class="mt-3 inline-flex min-h-11 items-center break-all text-lg underline decoration-[#BFC6C3] underline-offset-4 transition-colors hover:text-[#68767A]">mads.falk@zimo.no</a>
+          <div class="mt-9 border-t border-[#C9CFCC] pt-7"><h3 class="font-semibold">Har dere allerede SitePulse?</h3><p class="mt-3 text-sm leading-relaxed text-[#566267]">Åpne Cloud for å følge prosjektene deres. Send oss en e-post hvis dere trenger hjelp.</p><a href="https://sitepulse.zimo.no" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex min-h-11 items-center text-sm font-semibold underline underline-offset-4 transition-colors hover:text-[#68767A]">Åpne Cloud ↗</a></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
