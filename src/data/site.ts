@@ -6,6 +6,7 @@ export const site = {
   cloud: "https://sitepulse.zimo.no",
   contactName: "Mads Falk",
   email: "mads.falk@zimo.no",
+  organizationNumber: "933 857 379",
 } as const;
 
 export const socialLinks = [

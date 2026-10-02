@@ -58,8 +58,18 @@ import Layout from "../../layouts/Layout.astro";
         aria-label="Kontaktinformasjon"
       >
         <h2 class="text-xl font-semibold">Ta kontakt direkte</h2>
+        <img
+          src="/images/mads-falk.jpeg"
+          alt={`Portrett av ${site.contactName}`}
+          width="359"
+          height="392"
+          class="mt-6 h-auto w-full max-w-[240px] rounded-[8px]"
+          loading="lazy"
+          decoding="async"
+        />
         <p class="mt-6 font-medium">{site.contactName}</p>
-        <p class="mt-1 text-sm text-[#566267]">ZiMO</p>
+        <p class="mt-1 text-sm text-[#566267]">ZiMO AS</p>
+        <p class="mt-2 text-sm text-[#566267]">Org.nr. {site.organizationNumber}</p>
         <a
           href={contactHref()}
           class="mt-3 inline-flex min-h-11 items-center break-all text-lg underline decoration-[#BFC6C3] underline-offset-4 transition-colors hover:text-[#68767A]"
