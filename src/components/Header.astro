@@ -22,6 +22,7 @@ import { site } from "../data/site";
     >
       <NavLink href={site.home}>Hovedside</NavLink>
       <ProductMenu />
+      <NavLink href={site.breeam}>BREEAM-NOR</NavLink>
       <NavLink href={site.contact}>Kontakt oss</NavLink>
     </nav>
 
@@ -79,6 +80,9 @@ import { site } from "../data/site";
         Hovedside
       </NavLink>
       <ProductMenu mobile />
+      <NavLink href={site.breeam} mobile>
+        BREEAM-NOR
+      </NavLink>
       <NavLink href={site.contact} mobile>
         Kontakt oss
       </NavLink>

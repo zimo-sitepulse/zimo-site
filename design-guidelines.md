@@ -21,7 +21,8 @@ Disse brukerbestemte endringene går foran tidligere føringer i dokumentet:
 - Merkevarens gulfarge er `#FFD600`.
 - Forsiden setter SitePulse-systemet i sentrum gjennom datainnsamling, kostnadsbesparelser og automatisk dokumentasjon.
 - Cloud-demoen er fjernet fra forsiden fordi den ikke gjenspeiler SitePulse Cloud. Seksjonen viser kun de tre stegene, uten skjermbilde eller illustrert grensesnitt.
-- Menyen består av Hovedside, Produkter, Kontakt oss, Åpne Cloud og Bli kunde. Aktiv side markeres med gul tekst og linje i desktop- og mobilmenyen; produktsider markerer både produktgruppen og riktig produkt. Systemet, Automasjon, Dokumentasjon og Pris er fjernet som menypunkter og separate fordypningsseksjoner.
+- Menyen består av Hovedside, Produkter, BREEAM-NOR, Kontakt oss, Åpne Cloud og Bli kunde. Aktiv side markeres med gul tekst og linje i desktop- og mobilmenyen; produktsider markerer både produktgruppen og riktig produkt. Systemet, Automasjon, Dokumentasjon og Pris er fjernet som menypunkter og separate fordypningsseksjoner.
+- BREEAM-NOR har egen side med energibruk (Man 03) og fuktsikkerhet (Mat 05), lenket fra forsiden og navigasjonen. Underlaget beskrives som dokumentasjonsstøtte, med referanser til v6.1.1. Kommende sensorer utvikles for NS 3511 (betong) og NS 3512 (tre).
 - Produktene har egne sider under `/produkter/`, inkludert to kommende fuktighetsmålere.
 - Kontakt oss har egen side på `/kontakt/`. Bli kunde peker til denne sidens kundeseksjon med tydelig e-postkontakt.
 - Facebook, Instagram og LinkedIn ligger i bunnteksten.

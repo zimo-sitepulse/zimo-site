@@ -87,8 +87,21 @@ export const products: Product[] = [
     title: "Fuktighetsmåler i betong",
     intro: "Fuktmåling i betong. Kommer snart til SitePulse.",
     description:
-      "Vi utvider produktutvalget med en fuktighetsmåler for betong. Mer informasjon om produktet og tilgjengelighet kommer når det er klart.",
-    details: [],
+      "Vi utvikler en sensor for måling av relativ fuktighet i betong i henhold til NS 3511. Sensoren skal gi måledata til oppfølging av uttørking og fuktdokumentasjon i SitePulse.",
+    details: [
+      {
+        title: "NS 3511",
+        text: "Planlagt målemetode: relativ fuktighet (RF) i borehull i betong, i henhold til NS 3511.",
+      },
+      {
+        title: "Fuktdokumentasjon",
+        text: "Målet er å gi måledata som kan inngå i prosjektets dokumentasjon av fuktnivå før overflatebelegg legges.",
+      },
+      {
+        title: "Kommer snart",
+        text: "Sensoren er under utvikling. Mer informasjon om utførelse og tilgjengelighet kommer før lansering.",
+      },
+    ],
     comingSoon: true,
   },
   {
@@ -97,8 +110,21 @@ export const products: Product[] = [
     title: "Fuktighetsmåler i tre",
     intro: "Fuktmåling i tre. Kommer snart til SitePulse.",
     description:
-      "Vi utvider produktutvalget med en fuktighetsmåler for tre. Mer informasjon om produktet og tilgjengelighet kommer når det er klart.",
-    details: [],
+      "Vi utvikler en sensor for måling av fukt i trekonstruksjoner i henhold til NS 3512. Sensoren skal gi måledata til oppfølging av materialfukt og fuktdokumentasjon i SitePulse.",
+    details: [
+      {
+        title: "NS 3512",
+        text: "Planlagt målemetode: måling av fukt i trekonstruksjoner i byggefasen, i henhold til NS 3512.",
+      },
+      {
+        title: "Fuktdokumentasjon",
+        text: "Målet er å gi måledata som kan inngå i prosjektets kontroll av materialfukt før innbygging.",
+      },
+      {
+        title: "Kommer snart",
+        text: "Sensoren er under utvikling. Mer informasjon om utførelse og tilgjengelighet kommer før lansering.",
+      },
+    ],
     comingSoon: true,
   },
 ];

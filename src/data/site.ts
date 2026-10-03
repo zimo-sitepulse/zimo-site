@@ -2,6 +2,7 @@ export const site = {
   url: "https://zimo.no",
   home: "/sitepulse/",
   contact: "/kontakt/",
+  breeam: "/breeam-nor/",
   becomeCustomer: "/kontakt/#bli-kunde",
   cloud: "https://sitepulse.zimo.no",
   contactName: "Mads Falk",

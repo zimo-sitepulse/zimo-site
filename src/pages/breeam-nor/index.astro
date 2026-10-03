@@ -1,0 +1,220 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { site, contactHref } from "../../data/site";
+
+const sources = {
+  energy:
+    "https://breeam-nor.byggalliansen.no/v6/kategorier-og-emner/1-ledelse/man-03-ansvarlig-byggepraksis/reduksjon-av-klimagassutslipp-fra-aktiviteter-tilknyttet-utbyggingsomradet/",
+  moisture:
+    "https://breeam-nor.byggalliansen.no/v6/kategorier-og-emner/materialer/mat-05-robust-og-klimatilpasset-konstruksjon/fuktsikkerhet-i-byggefasen/",
+  standards:
+    "https://standard.no/fagomrader/ns-3511-og-ns-3512---nye-standarder-for-maling-av-fukt-i-betong-og-trekonstruksjoner/",
+};
+---
+
+<Layout
+  title="BREEAM-NOR-dokumentasjon – SitePulse fra ZiMO"
+  description="SitePulse støtter dokumentasjonsarbeidet for energibruk under Man 03 og fuktsikkerhet under Mat 05. Les om datagrunnlag og kommende sensorer for NS 3511 og NS 3512."
+>
+  <section class="bg-[#111315] py-16 text-white lg:py-24">
+    <div class="zimo-shell">
+      <p class="zimo-eyebrow text-brand">SitePulse / BREEAM-NOR</p>
+      <h1 class="mt-6 max-w-4xl text-4xl font-semibold leading-[1.04] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
+        Fra målinger til
+        <br />
+        BREEAM-NOR-dokumentasjon.
+      </h1>
+      <p class="mt-7 max-w-2xl text-lg leading-relaxed text-white/70">
+        SitePulse støtter dokumentasjonsarbeidet på byggeplassen. Vi hjelper dere å samle
+        datagrunnlaget for energibruk og følge forholdene som er viktige for fuktsikkerheten.
+      </p>
+      <nav class="mt-8 flex flex-wrap gap-3 text-sm font-medium" aria-label="Temaer på denne siden">
+        <a
+          href="#man-03"
+          class="rounded-[8px] border border-white/25 px-4 py-3 transition-colors hover:bg-white/10"
+        >
+          Energibruk – Man 03
+        </a>
+        <a
+          href="#mat-05"
+          class="rounded-[8px] border border-white/25 px-4 py-3 transition-colors hover:bg-white/10"
+        >
+          Fuktsikkerhet – Mat 05
+        </a>
+      </nav>
+    </div>
+  </section>
+
+  <section id="man-03" class="border-b border-[#D4D8D5] bg-[#F5F5F2] py-16 lg:py-24">
+    <div class="zimo-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+      <div>
+        <p class="zimo-eyebrow">Energibruk i byggefasen</p>
+        <h2 class="mt-5 text-3xl font-semibold leading-[1.12] tracking-[-0.035em] sm:text-4xl">
+          Energibruk – Man 03
+        </h2>
+        <p class="mt-5 text-base leading-relaxed text-[#566267]">
+          Man 03 omfatter oppfølging av målt energiforbruk og beregnede klimagassutslipp fra
+          byggeprosessen, sammenlignet med prosjektets plan.
+        </p>
+        <a
+          href={sources.energy}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-5 inline-flex min-h-11 items-center text-sm underline underline-offset-4 transition-colors hover:text-[#68767A]"
+        >
+          Les kriteriene hos Grønn Byggallianse ↗
+        </a>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold">Dette kan SitePulse bidra med</h3>
+        <ul class="mt-6 divide-y divide-[#D4D8D5] border-y border-[#D4D8D5] text-base leading-relaxed text-[#566267]">
+          <li class="py-5">
+            Datainnsamling fra tilkoblet måleutstyr, med oppsett tilpasset energibruken dere skal
+            følge.
+          </li>
+          <li class="py-5">
+            Historikk som gir grunnlag for å følge utviklingen og vurdere tiltak for redusert
+            forbruk.
+          </li>
+          <li class="py-5">
+            Måledata som kan inngå i prosjektets energidokumentasjon og videre klimagassberegninger.
+          </li>
+        </ul>
+        <p class="mt-6 text-sm leading-relaxed text-[#566267]">
+          Vi avklarer måleutstyr, måleomfang og dokumentasjonsbehov sammen med dere. Andre
+          energibærere, som brensel, må også inngå i prosjektets samlede underlag når de er
+          relevante.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="mat-05" class="bg-white py-16 lg:py-24">
+    <div class="zimo-shell">
+      <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+        <div>
+          <p class="zimo-eyebrow">Fuktsikkerhet i byggefasen</p>
+          <h2 class="mt-5 text-3xl font-semibold leading-[1.12] tracking-[-0.035em] sm:text-4xl">
+            Fuktsikkerhet – Mat 05
+          </h2>
+          <p class="mt-5 text-base leading-relaxed text-[#566267]">
+            Mat 05 omfatter kontrollplan, sjekklister og dokumentasjon av uttørking og fuktnivå i
+            konstruksjonen. Målemetode og materialets fuktnivå inngår i vurderingen.
+          </p>
+          <a
+            href={sources.moisture}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-5 inline-flex min-h-11 items-center text-sm underline underline-offset-4 transition-colors hover:text-[#68767A]"
+          >
+            Les kriteriene hos Grønn Byggallianse ↗
+          </a>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold">Følg forholdene og samle historikken</h3>
+          <p class="mt-5 text-base leading-relaxed text-[#566267]">
+            Temperatur- og luftfuktighetsmålinger fra SitePulse gir løpende oversikt over klimaet
+            under uttørking. Historikken kan inngå som støtte i prosjektets fuktdokumentasjon.
+          </p>
+          <p class="mt-4 text-base leading-relaxed text-[#566267]">
+            For selve materialfukten utvikler vi egne sensorer for betong og tre. Klimamålinger
+            alene erstatter ikke målingene i materialene.
+          </p>
+          <a
+            href="/produkter/temperatur-luftfuktighet/"
+            class="mt-5 inline-flex min-h-11 items-center font-semibold underline underline-offset-4 transition-colors hover:text-[#68767A]"
+          >
+            Se temperatur- og luftfuktighetssensoren →
+          </a>
+        </div>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        <article class="rounded-[8px] border border-[#D4D8D5] bg-[#F5F5F2] p-6 sm:p-8">
+          <span class="inline-flex rounded-full bg-brand px-3 py-1 text-xs font-semibold">
+            Kommer snart
+          </span>
+          <h3 class="mt-5 text-2xl font-semibold">Betong · NS 3511</h3>
+          <p class="mt-4 text-base leading-relaxed text-[#566267]">
+            Sensoren utvikles for måling av relativ fuktighet i borehull i betong i henhold til NS
+            3511, som grunnlag for oppfølging av uttørking før overflatebelegg.
+          </p>
+          <a
+            href="/produkter/fuktighetsmaler-betong/"
+            class="mt-5 inline-flex min-h-11 items-center font-semibold underline underline-offset-4 transition-colors hover:text-[#68767A]"
+          >
+            Les om betongsensoren →
+          </a>
+        </article>
+        <article class="rounded-[8px] border border-[#D4D8D5] bg-[#F5F5F2] p-6 sm:p-8">
+          <span class="inline-flex rounded-full bg-brand px-3 py-1 text-xs font-semibold">
+            Kommer snart
+          </span>
+          <h3 class="mt-5 text-2xl font-semibold">Tre · NS 3512</h3>
+          <p class="mt-4 text-base leading-relaxed text-[#566267]">
+            Sensoren utvikles for måling av fukt i trekonstruksjoner i henhold til NS 3512, som
+            grunnlag for kontroll av materialfukt før innbygging.
+          </p>
+          <a
+            href="/produkter/fuktighetsmaler-tre/"
+            class="mt-5 inline-flex min-h-11 items-center font-semibold underline underline-offset-4 transition-colors hover:text-[#68767A]"
+          >
+            Les om tresensoren →
+          </a>
+        </article>
+      </div>
+      <a
+        href={sources.standards}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-6 inline-flex min-h-11 items-center text-sm text-[#566267] underline underline-offset-4 transition-colors hover:text-[#111315]"
+      >
+        Om NS 3511 og NS 3512 hos Standard Norge ↗
+      </a>
+    </div>
+  </section>
+
+  <section class="border-y border-[#D4D8D5] bg-[#F5F5F2] py-12">
+    <div class="zimo-shell grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+      <h2 class="text-xl font-semibold">Tilpasset prosjektets dokumentasjonskrav</h2>
+      <div class="space-y-3 text-sm leading-relaxed text-[#566267]">
+        <p>
+          Omtalen bygger på BREEAM-NOR v6.1.1. Måleoppsett og underlag må tilpasses manualversjonen
+          og kontrollplanen som gjelder for prosjektet.
+        </p>
+        <p>
+          SitePulse leverer støtte til dokumentasjonsarbeidet. Prosjektet og BREEAM-revisoren
+          vurderer den samlede kravoppfyllelsen; bruk av systemet gir ikke automatisk poeng eller
+          sertifisering.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-brand py-16 lg:py-20">
+    <div class="zimo-shell grid gap-8 lg:grid-cols-2 lg:items-end">
+      <div>
+        <p class="zimo-eyebrow text-[#584A00]">La oss se på behovet deres</p>
+        <h2 class="mt-5 text-3xl font-semibold leading-[1.12] tracking-[-0.035em] sm:text-4xl">
+          Planlegger dere et
+          <br />
+          BREEAM-NOR-prosjekt?
+        </h2>
+      </div>
+      <div>
+        <p class="max-w-lg text-lg leading-relaxed text-[#443B0C]">
+          Ta kontakt om hvilke målinger og hvilken dokumentasjon dere trenger. Vi avklarer hva
+          SitePulse kan bidra med i prosjektet.
+        </p>
+        <a
+          href={contactHref("BREEAM-NOR – dokumentasjon med SitePulse")}
+          class="mt-6 inline-flex min-h-12 items-center justify-center rounded-[8px] bg-[#111315] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#30373A]"
+        >
+          Snakk med oss om BREEAM-NOR
+        </a>
+        <a href={site.contact} class="ml-0 mt-4 block text-sm underline underline-offset-4">
+          Se kontaktinformasjon →
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
