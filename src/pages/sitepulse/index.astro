@@ -5,25 +5,30 @@ import Layout from "../../layouts/Layout.astro";
 const benefits = [
   {
     number: "01",
-    title: "Samle data.",
-    text: "Temperatur, luftfuktighet og status fra byggeplassen samles i SitePulse Cloud. Se hva som skjer, uten å være overalt selv.",
+    title: "Energioptimalisering",
+    text: "La målingene styre byggvarme og tilkoblet utstyr etter faktisk behov. Følg utviklingen og juster driften for å begrense unødvendig energibruk.",
   },
   {
     number: "02",
-    title: "Reduser kostnader.",
-    text: "Bruk målingene til å styre etter behov, begrense unødvendig energibruk og redusere tiden brukt på manuell oppfølging.",
+    title: "Aktiv byggeplasskontroll",
+    text: "Koble oversikt til handling. Følg forholdene, få varsler ved avvik og la avtalte regler styre utstyret, slik at teamet kan gripe inn når det trengs.",
   },
   {
     number: "03",
-    title: "Dokumenter automatisk.",
-    text: "Målinger og hendelser logges løpende. Historikken er samlet når dere trenger den, gjennom hele prosjektet.",
+    title: "Leverandøruavhengighet",
+    text: "Samle kompatibelt utstyr fra ulike leverandører i én løsning. Velg utstyr etter prosjektets behov; vi avklarer hvilke enheter og funksjoner som kan kobles til.",
+  },
+  {
+    number: "04",
+    title: "Bedre prosjektøkonomi",
+    text: "Reduser energisløsing og tid brukt på manuell oppfølging. Bygg videre på utstyret dere har, og tilpass oppsettet til det prosjektet faktisk trenger.",
   },
 ];
 ---
 
 <Layout
-  title="SitePulse fra ZiMO – data, besparelser og automatisk dokumentasjon"
-  description="SitePulse samler data fra byggeplassen, hjelper dere å redusere kostnader og automatiserer dokumentasjonen. Ta kontakt med ZiMO for å bli kunde."
+  title="SitePulse fra ZiMO – energioptimalisering og aktiv byggeplasskontroll"
+  description="Energioptimalisering, aktiv byggeplasskontroll og leverandøruavhengighet. SitePulse gir bedre grunnlag for styring og økonomi på byggeplassen."
 >
   <section class="overflow-hidden bg-[#111315] pb-16 pt-16 text-white sm:pt-24 lg:pb-20 lg:pt-28">
     <div class="zimo-shell">
@@ -31,14 +36,15 @@ const benefits = [
         <span class="h-2 w-2 rounded-full bg-brand" aria-hidden="true"></span>SitePulse fra ZiMO
       </p>
       <h1 class="mt-8 max-w-5xl text-[clamp(2.6rem,6.5vw,6rem)] font-semibold leading-[1.04] tracking-[-0.05em]">
-        Data som gir oversikt.
+        Styr energibruken.
         <br />
-        Oversikt som <span class="text-brand">lønner seg.</span>
+        <span class="text-brand">Styr kostnadene.</span>
       </h1>
       <div class="mt-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
         <p class="max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl">
-          SitePulse samler data fra byggeplassen, hjelper dere å spare penger og dokumenterer
-          automatisk. Mindre manuell oppfølging. Mer kontroll gjennom hele prosjektet.
+          SitePulse kobler målinger til aktiv styring av byggeplassen. Optimaliser energibruken,
+          følg opp avvik og samle kompatibelt utstyr fra ulike leverandører i én løsning. Bedre
+          kontroll på drift og økonomi, med dokumentasjonen samlet underveis.
         </p>
         <div class="flex flex-wrap gap-3 lg:justify-end">
           <a
@@ -56,9 +62,10 @@ const benefits = [
         </div>
       </div>
       <div class="mt-16 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-6 text-xs font-medium text-white/60 lg:mt-20">
-        <span>Samlet i SitePulse Cloud</span>
-        <span>Løpende datainnsamling</span>
-        <span>Automatisk historikk</span>
+        <span>Energioptimalisering</span>
+        <span>Aktiv byggeplasskontroll</span>
+        <span>Leverandøruavhengighet</span>
+        <span>Prosjektøkonomi</span>
       </div>
     </div>
   </section>
@@ -67,7 +74,7 @@ const benefits = [
     class="border-b border-[#D4D8D5] bg-[#F5F5F2] py-16 lg:py-24"
     aria-label="Hva SitePulse gjør for dere"
   >
-    <div class="zimo-shell grid gap-12 md:grid-cols-3 md:gap-8">
+    <div class="zimo-shell grid gap-12 md:grid-cols-2 md:gap-x-16">
       {benefits.map((item) => (
         <article>
           <p class="text-xs font-semibold text-[#68767A]">{item.number}</p>
@@ -84,36 +91,40 @@ const benefits = [
         <div>
           <p class="zimo-eyebrow text-brand">Fra byggeplassen til beslutningen</p>
           <h2 class="mt-5 max-w-xl text-4xl font-semibold leading-[1.08] tracking-[-0.04em] sm:text-5xl">
-            Ett sted å følge
+            Fra måling
             <br />
-            hele prosjektet.
+            til aktiv styring.
           </h2>
         </div>
         <p class="max-w-lg text-lg leading-relaxed text-white/70 lg:justify-self-end">
-          Utstyret samler inn data. Gatewayen sender dem til Cloud. Dere får oversikt, varsler og
-          dokumentasjon i nettleseren, på kontoret eller i felt.
+          SitePulse gir dere grunnlag for å styre byggeplassen etter det som faktisk skjer.
+          Målinger, varsler og regler henger sammen, og historikken gjør det enklere å følge opp
+          både driften og tiltakene dere setter i gang.
         </p>
       </div>
       <ol class="grid gap-8 md:grid-cols-3">
         <li class="border-t border-white/20 pt-5">
-          <span class="text-xs text-brand">01 / På byggeplassen</span>
-          <h3 class="mt-3 text-xl font-semibold">Data samles inn.</h3>
+          <span class="text-xs text-brand">01 / Mål behovet</span>
+          <h3 class="mt-3 text-xl font-semibold">Se hva byggeplassen trenger.</h3>
           <p class="mt-3 max-w-md text-sm leading-relaxed text-white/65">
-            Sensorer og tilkoblet utstyr følger forholdene der jobben skjer.
+            Sensorer følger temperatur, luftfuktighet og status, slik at driften kan tilpasses
+            forholdene på byggeplassen.
           </p>
         </li>
         <li class="border-t border-white/20 pt-5">
-          <span class="text-xs text-brand">02 / I SitePulse Cloud</span>
-          <h3 class="mt-3 text-xl font-semibold">Oversikten oppdateres.</h3>
+          <span class="text-xs text-brand">02 / Styr aktivt</span>
+          <h3 class="mt-3 text-xl font-semibold">La målingene utløse handling.</h3>
           <p class="mt-3 max-w-md text-sm leading-relaxed text-white/65">
-            Gatewayen sender målingene videre via LTE, slik at teamet kan følge prosjektet.
+            Bruk regler for byggvarme og tilkoblet utstyr. Varsler gjør teamet oppmerksom på avvik
+            som må følges opp.
           </p>
         </li>
         <li class="border-t border-white/20 pt-5">
-          <span class="text-xs text-brand">03 / Gjennom prosjektet</span>
-          <h3 class="mt-3 text-xl font-semibold">Historikken følger med.</h3>
+          <span class="text-xs text-brand">03 / Følg opp økonomien</span>
+          <h3 class="mt-3 text-xl font-semibold">Juster driften underveis.</h3>
           <p class="mt-3 max-w-md text-sm leading-relaxed text-white/65">
-            Se utviklingen, følg opp avvik og bruk dokumentasjonen når dere trenger den.
+            Bruk historikken til å vurdere driften, prioritere tiltak og følge energibruken der den
+            måles. Dokumentasjonen samles løpende.
           </p>
         </li>
       </ol>
@@ -125,13 +136,14 @@ const benefits = [
       <div>
         <p class="zimo-eyebrow">BREEAM-NOR</p>
         <h2 class="mt-5 max-w-xl text-3xl font-semibold leading-[1.12] tracking-[-0.035em] sm:text-4xl">
-          Data til dokumentasjonen dere trenger.
+          Kontroll som også gir dokumentasjon.
         </h2>
       </div>
       <div>
         <p class="max-w-xl text-lg leading-relaxed text-[#566267]">
-          Vi støtter arbeidet med BREEAM-NOR-dokumentasjon for energibruk og fuktsikkerhet. Se
-          hvordan SitePulse kan bidra, og hvilke fuktsensorer som kommer.
+          Dataene dere bruker til energioptimalisering og byggeplasskontroll kan også støtte
+          BREEAM-NOR-dokumentasjonen. Se hva vi tilbyr for energibruk og fuktsikkerhet, og hvilke
+          fuktsensorer som kommer.
         </p>
         <p class="mt-5 text-sm font-semibold text-[#566267]">
           Energibruk – Man 03 · Fuktsikkerhet – Mat 05
@@ -151,15 +163,15 @@ const benefits = [
       <div>
         <p class="zimo-eyebrow text-[#584A00]">Bli kunde</p>
         <h2 class="mt-5 max-w-2xl text-4xl font-semibold leading-[1.08] tracking-[-0.04em] sm:text-5xl">
-          Hva vil dere få
+          Hvor kan dere bruke
           <br />
-          bedre kontroll på?
+          energien smartere?
         </h2>
       </div>
       <div>
         <p class="max-w-md text-lg leading-relaxed text-[#443B0C]">
-          Fortell oss om byggeplassen og behovet deres. Sammen finner vi et oppsett som passer
-          prosjektet.
+          Fortell oss om energibruken, utstyret og utfordringene på byggeplassen. Sammen finner vi
+          et oppsett med riktig styring og en økonomi som passer prosjektet.
         </p>
         <a
           href={site.becomeCustomer}

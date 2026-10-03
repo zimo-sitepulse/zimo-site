@@ -19,7 +19,7 @@ Disse brukerbestemte endringene går foran tidligere føringer i dokumentet:
 
 - ZiMO-logoen står alene i toppmeny og bunntekst, med gul prikk og uten SitePulse-tekst ved siden av.
 - Merkevarens gulfarge er `#FFD600`.
-- Forsiden setter SitePulse-systemet i sentrum gjennom datainnsamling, kostnadsbesparelser og automatisk dokumentasjon.
+- Nettsidens fire hovedbudskap er energioptimalisering, aktiv byggeplasskontroll, leverandøruavhengighet og prosjektøkonomi. Fordelene beskrives direkte uten konkurrentomtale eller sammenligninger. Dokumentasjon støtter disse budskapene. Leverandøruavhengighet gjelder kompatibelt utstyr; universell støtte eller garanterte besparelser skal ikke loves.
 - Cloud-demoen er fjernet fra forsiden fordi den ikke gjenspeiler SitePulse Cloud. Seksjonen viser kun de tre stegene, uten skjermbilde eller illustrert grensesnitt.
 - Menyen består av Hovedside, Produkter, BREEAM-NOR, Kontakt oss, Åpne Cloud og Bli kunde. Aktiv side markeres med gul tekst og linje i desktop- og mobilmenyen; produktsider markerer både produktgruppen og riktig produkt. Systemet, Automasjon, Dokumentasjon og Pris er fjernet som menypunkter og separate fordypningsseksjoner.
 - BREEAM-NOR har egen side med energibruk (Man 03) og fuktsikkerhet (Mat 05), lenket fra forsiden og navigasjonen. Underlaget beskrives som dokumentasjonsstøtte, med referanser til v6.1.1. Kommende sensorer utvikles for NS 3511 (betong) og NS 3512 (tre).

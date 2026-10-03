@@ -18,9 +18,9 @@ export const products: Product[] = [
     slug: "temperatur-luftfuktighet",
     label: "Temp/luftfuktighet",
     title: "Temperatur og luftfuktighet",
-    intro: "Følg inneklimaet på byggeplassen i SitePulse Cloud.",
+    intro: "Målinger som gir grunnlag for smartere byggvarme og aktiv oppfølging.",
     description:
-      "Samle temperatur og luftfuktighet i samme oversikt. Målingene gjør det enklere å følge forholdene gjennom prosjektet, fra byggvarme til uttørking.",
+      "Bruk temperatur og luftfuktighet som grunnlag for energioptimalisering og aktiv byggeplasskontroll. Følg forholdene, tilpass byggvarmen og behold historikken gjennom prosjektet.",
     details: [
       {
         title: "Oversikt",
@@ -38,9 +38,9 @@ export const products: Product[] = [
     slug: "stromstopsel",
     label: "Strømstøpsel",
     title: "Strømstøpsel",
-    intro: "Enkel strømstyring som en del av SitePulse.",
+    intro: "Styr tilkoblet utstyr etter behov og begrens unødvendig energibruk.",
     description:
-      "Koble til utstyr og la strømstyring inngå i oppfølgingen av byggeplassen. Sammen med målinger og regler i SitePulse kan dere styre etter behov.",
+      "Gjør energioptimalisering til en del av den daglige driften. Med målinger og regler i SitePulse kan strømstøpselet styre kompatibelt utstyr etter behov og redusere tiden det står på unødvendig.",
     details: [
       { title: "Styring", text: "Samle oppfølgingen av tilkoblet utstyr i SitePulse Cloud." },
       {
@@ -65,9 +65,9 @@ export const products: Product[] = [
     },
     label: "Gateway",
     title: "SitePulse Gateway",
-    intro: "Fra byggeplassen til SitePulse Cloud, via LTE.",
+    intro: "Knytt kompatibelt utstyr til én samlet byggeplasskontroll.",
     description:
-      "Gatewayen kobler sensorer og utstyr til SitePulse Cloud. Prosjektteamet får målinger, status og historikk tilgjengelig i nettleseren, på kontoret eller i felt.",
+      "Gatewayen samler kompatible sensorer og utstyr i SitePulse Cloud via LTE. Det gir grunnlag for aktiv styring og energioptimalisering, med frihet til å velge utstyr fra ulike leverandører. Vi avklarer kompatibiliteten som del av oppsettet.",
     details: [
       { title: "LTE", text: "Gatewayen bruker mobilnettet for å holde SitePulse Cloud oppdatert." },
       {
