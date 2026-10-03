@@ -1,8 +1,8 @@
 /* SVG geometry lives in architecture/model.ts; styling and timing stay here. */
 .sitepulse-architecture {
   width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
+  max-width: 1250px;
+  margin: 4rem auto 0;
   --diagram-line: #73797b;
   --diagram-text: #e6e8e8;
 }
@@ -20,17 +20,17 @@
   text-anchor: middle;
 }
 .sitepulse-architecture .sensor-label {
-  font-size: 22px;
+  font-size: 15px;
 }
 .sitepulse-architecture .gateway-label {
-  font-size: 20px;
+  font-size: 14px;
 }
 .sitepulse-architecture .cloud-label {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 500;
 }
 .sitepulse-architecture .dashboard-label {
-  font-size: 20px;
+  font-size: 15px;
 }
 .sitepulse-architecture .screen-title {
   font-size: 14px;
@@ -102,7 +102,7 @@
   stroke-linecap: round;
 }
 .sitepulse-architecture figcaption {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   text-align: center;
   color: #9aa1a4;
   font-size: 12px;
@@ -159,7 +159,8 @@
 }
 @media (max-width: 767px) {
   .sitepulse-architecture {
-    max-width: 300px;
+    margin-top: 3rem;
+    max-width: 420px;
   }
   .sitepulse-architecture .architecture-desktop {
     display: none;
@@ -168,6 +169,6 @@
     display: block;
   }
   .sitepulse-architecture .sensor-label {
-    font-size: 16px;
+    font-size: 13px;
   }
 }
