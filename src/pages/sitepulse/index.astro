@@ -1,7 +1,7 @@
 ---
 import { site } from "../../data/site";
 import Layout from "../../layouts/Layout.astro";
-import SitePulseArchitecture from "../../components/SitePulseArchitecture.astro";
+import SitePulseHero from "../../components/SitePulseHero.astro";
 
 const benefits = [
   {
@@ -31,46 +31,7 @@ const benefits = [
   title="SitePulse fra ZiMO – energioptimalisering og aktiv byggeplasskontroll"
   description="Energioptimalisering, aktiv byggeplasskontroll og leverandøruavhengighet. SitePulse gir bedre grunnlag for styring og økonomi på byggeplassen."
 >
-  <section class="overflow-hidden bg-[#111315] pb-16 pt-16 text-white sm:pt-24 lg:pb-20 lg:pt-28">
-    <div class="zimo-shell">
-      <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-white/65">
-        <span class="h-2 w-2 rounded-full bg-brand" aria-hidden="true"></span>SitePulse fra ZiMO
-      </p>
-      <h1 class="mt-8 max-w-5xl text-[clamp(2.6rem,6.5vw,6rem)] font-semibold leading-[1.04] tracking-[-0.05em]">
-        Data som gir oversikt.
-        <br />
-        Oversikt som <span class="text-brand">lønner seg.</span>
-      </h1>
-      <div class="mt-8 space-y-7">
-        <p class="max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl">
-          SitePulse kobler målinger til aktiv styring av byggeplassen. Optimaliser energibruken,
-          følg opp avvik og samle kompatibelt utstyr fra ulike leverandører i én løsning. Bedre
-          kontroll på drift og økonomi, med dokumentasjonen samlet underveis.
-        </p>
-        <div class="flex flex-wrap gap-3">
-          <a
-            href={site.becomeCustomer}
-            class="inline-flex min-h-12 items-center justify-center gap-8 rounded-[8px] bg-brand px-6 py-3.5 text-sm font-semibold text-[#111315] transition-colors hover:bg-brand-hover"
-          >
-            Bli kunde <span aria-hidden="true">↗</span>
-          </a>
-          <a
-            href="#slik-fungerer-det"
-            class="inline-flex min-h-12 items-center justify-center rounded-[8px] border border-white/30 px-6 py-3.5 text-sm font-medium transition-colors hover:bg-white/10"
-          >
-            Se hvordan det fungerer
-          </a>
-        </div>
-      </div>
-      <SitePulseArchitecture />
-      <div class="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-6 text-xs font-medium text-white/60">
-        <span>Energioptimalisering</span>
-        <span>Aktiv byggeplasskontroll</span>
-        <span>Leverandøruavhengighet</span>
-        <span>Prosjektøkonomi</span>
-      </div>
-    </div>
-  </section>
+  <SitePulseHero />
 
   <section
     class="border-b border-[#D4D8D5] bg-[#F5F5F2] py-16 lg:py-24"
