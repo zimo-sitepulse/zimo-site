@@ -1,0 +1,174 @@
+/* SVG geometry lives in architecture/model.ts; styling and timing stay here. */
+.sitepulse-architecture {
+  width: 100%;
+  max-width: 1250px;
+  margin: 4rem auto 0;
+  --diagram-line: #73797b;
+  --diagram-text: #e6e8e8;
+}
+.sitepulse-architecture > svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.sitepulse-architecture .architecture-mobile {
+  display: none;
+}
+.sitepulse-architecture text {
+  fill: var(--diagram-text);
+  font-family: inherit;
+  text-anchor: middle;
+}
+.sitepulse-architecture .sensor-label {
+  font-size: 15px;
+}
+.sitepulse-architecture .gateway-label {
+  font-size: 14px;
+}
+.sitepulse-architecture .cloud-label {
+  font-size: 22px;
+  font-weight: 500;
+}
+.sitepulse-architecture .dashboard-label {
+  font-size: 15px;
+}
+.sitepulse-architecture .screen-title {
+  font-size: 14px;
+  text-anchor: start;
+}
+.sitepulse-architecture .node-box {
+  fill: #191c1e;
+  stroke: #474d50;
+  stroke-width: 1.3;
+}
+.sitepulse-architecture .node-icon {
+  fill: none;
+  stroke: #e6e8e8;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.sitepulse-architecture .hardware-box {
+  fill: #141719;
+  stroke: var(--diagram-line);
+  stroke-width: 1.4;
+}
+.sitepulse-architecture .hardware-outline {
+  fill: none;
+  stroke: var(--diagram-line);
+  stroke-width: 1.4;
+}
+.sitepulse-architecture .accent-fill,
+.sitepulse-architecture .flow-terminals {
+  fill: var(--color-brand);
+}
+.sitepulse-architecture .flow-line {
+  fill: none;
+  stroke: var(--color-brand);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  opacity: 0.8;
+}
+.sitepulse-architecture .cloud-outline {
+  fill: #131617;
+  stroke: var(--color-brand);
+  stroke-width: 1.8;
+}
+.sitepulse-architecture .cloud-glow {
+  fill: none;
+  stroke: var(--color-brand);
+  stroke-width: 7;
+  filter: blur(14px);
+  opacity: 0.16;
+}
+.sitepulse-architecture .screen-fill {
+  fill: #1a1e20;
+}
+.sitepulse-architecture .chart-grid {
+  fill: none;
+  stroke: #363b3d;
+  stroke-width: 0.6;
+}
+.sitepulse-architecture .chart-line {
+  fill: none;
+  stroke: var(--color-brand);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+.sitepulse-architecture .screen-detail {
+  fill: none;
+  stroke: #596064;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+.sitepulse-architecture figcaption {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #9aa1a4;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Visible by default: without JavaScript or with reduced motion, the diagram is complete. */
+@media (prefers-reduced-motion: no-preference) {
+  .sitepulse-architecture.is-ready .architecture-node,
+  .sitepulse-architecture.is-ready .flow-terminals {
+    opacity: 0;
+  }
+  .sitepulse-architecture.is-ready .flow-line {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    opacity: 0;
+  }
+  .sitepulse-architecture.is-visible .architecture-node,
+  .sitepulse-architecture.is-visible .flow-terminals {
+    animation: architecture-reveal 350ms ease-out var(--delay) both;
+  }
+  .sitepulse-architecture.is-visible .flow-line {
+    animation: architecture-connect 380ms ease-out var(--delay) both;
+  }
+  .sitepulse-architecture.is-visible .cloud-glow {
+    animation: architecture-glow 450ms ease-out 1150ms both;
+  }
+}
+@keyframes architecture-reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes architecture-connect {
+  from {
+    stroke-dashoffset: 1;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.8;
+  }
+}
+@keyframes architecture-glow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.16;
+  }
+}
+@media (max-width: 767px) {
+  .sitepulse-architecture {
+    margin-top: 3rem;
+    max-width: 420px;
+  }
+  .sitepulse-architecture .architecture-desktop {
+    display: none;
+  }
+  .sitepulse-architecture .architecture-mobile {
+    display: block;
+  }
+  .sitepulse-architecture .sensor-label {
+    font-size: 13px;
+  }
+}

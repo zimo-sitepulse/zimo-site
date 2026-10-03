@@ -1,0 +1,41 @@
+---
+import SensorNode from "./architecture/SensorNode.astro";
+import SystemNode from "./architecture/SystemNode.astro";
+import Connection from "./architecture/Connection.astro";
+import { sensors, connections, layouts } from "./architecture/model";
+import "../styles/architecture.css";
+
+// Unique accessible names even when the component occurs more than once on a page.
+const id = `architecture-${crypto.randomUUID()}`;
+---
+
+<figure class="sitepulse-architecture" data-architecture>
+  {layouts.map((layout) => (
+    <svg
+      class={`architecture-${layout.name}`}
+      viewBox={layout.viewBox}
+      role="img"
+      aria-labelledby={`${id}-${layout.name}-title ${id}-${layout.name}-description`}
+    >
+      <title id={`${id}-${layout.name}-title`}>Slik henger SitePulse sammen</title>
+      <desc id={`${id}-${layout.name}-description`}>
+        Betongfukt og trefukt sender direkte til SitePulse Cloud. Temperatur, styring og annet
+        kompatibelt utstyr kobles via SitePulse Gateway. Cloud samler dataene og gir oversikt og
+        dokumentasjon i dashboardet.
+      </desc>
+      {connections.map((connection) => (
+        <Connection {...connection} {...layout.paths[connection.from]} />
+      ))}
+      {sensors.map((sensor, index) => (
+        <SensorNode sensor={sensor} position={layout.positions[sensor.id]} delay={index * 35} />
+      ))}
+      <SystemNode kind="gateway" position={layout.positions.gateway} />
+      <SystemNode kind="cloud" position={layout.positions.cloud} />
+      <SystemNode kind="dashboard" position={layout.positions.dashboard} />
+    </svg>
+  ))}
+  <figcaption>Forenklet systemoversikt. Betong- og trefuktsensorer kommer snart.</figcaption>
+</figure>
+<script>
+  import "../scripts/architecture";
+</script>

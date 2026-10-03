@@ -26,6 +26,9 @@ npm run build
 - `src/data/site.ts`: kontaktinformasjon, felles lenker og sosiale medier.
 - `src/data/products.ts`: produkttekster, bilder og status. Hvert produkt får en side via `src/pages/produkter/[slug].astro`.
 - `src/pages/sitepulse/index.astro`: forsiden. Rotadressen videresender hit.
+- `src/components/SitePulseArchitecture.astro`: systemillustrasjonen i heroen. Delkomponenter for sensorer, forbindelser, systemnoder og ZiMO-symbol ligger i `src/components/architecture/`.
+- `src/components/architecture/model.ts`: felles koblingsmodell, etiketter og egne koordinater for desktop og mobil.
+- `src/styles/architecture.css` og `src/scripts/architecture.ts`: illustrasjonens uttrykk og korte intro ved innrulling. Uten JavaScript eller med redusert bevegelse vises den ferdig tegnet.
 - `src/pages/breeam-nor/index.astro`: dokumentasjonsstøtte for Man 03 og Mat 05, med lenker til offisiell veiledning.
 - `src/pages/kontakt/index.astro`: kontaktsiden. E-postlenker åpner besøkendes e-postprogram; nettstedet har ingen innsendingstjeneste.
 - `src/layouts/Layout.astro`: felles toppmeny, hovedinnhold og bunntekst. `BaseLayout.astro` håndterer dokumentet og metadata.

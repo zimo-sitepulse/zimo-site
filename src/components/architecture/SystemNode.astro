@@ -1,0 +1,62 @@
+---
+import ZimoMark from "./ZimoMark.astro";
+import type { Position } from "./model";
+interface Props {
+  kind: "gateway" | "cloud" | "dashboard";
+  position: Position;
+}
+const { kind, position } = Astro.props;
+const cloudShape =
+  "M-90 65C-125 65-143 40-140 12C-137-16-116-32-91-32C-77-73-44-89-11-82C22-79 44-56 49-28C90-31 118-8 118 24C118 49 99 65 74 65Z";
+const delay = { gateway: 160, cloud: 1050, dashboard: 1450 }[kind];
+---
+
+<g transform={`translate(${position.x} ${position.y}) scale(${position.scale ?? 1})`}>
+  <g class:list={["architecture-node", `system-${kind}`]} style={`--delay: ${delay}ms`}>
+    {kind === "gateway" && (
+      <>
+        <path d="M26-53V-83a3 3 0 0 1 6 0v30" class="hardware-outline" />
+        <rect x="-48" y="-52" width="96" height="110" rx="12" class="hardware-box" />
+        <circle cx="36" cy="-39" r="3" class="accent-fill" />
+        <ZimoMark />
+        <text y="27" class="gateway-label">
+          SitePulse
+        </text>
+        <text y="45" class="gateway-label">
+          Gateway
+        </text>
+      </>
+    )}
+    {kind === "cloud" && (
+      <>
+        <path d={cloudShape} class="cloud-glow" />
+        <path d={cloudShape} class="cloud-outline" />
+        <ZimoMark />
+        <text x="-10" y="38" class="cloud-label">
+          SitePulse Cloud
+        </text>
+      </>
+    )}
+    {kind === "dashboard" && (
+      <>
+        <rect x="-120" y="-82" width="240" height="168" rx="10" class="hardware-box" />
+        <rect x="-108" y="-69" width="216" height="142" rx="3" class="screen-fill" />
+        <circle cx="-89" cy="-47" r="3" class="accent-fill" />
+        <text x="-77" y="-42" class="screen-title">
+          SitePulse
+        </text>
+        <path d="M-90 30H90M-90 5H90M-90-20H90" class="chart-grid" />
+        <path
+          d="M-89 25C-72 25-78 4-59 6S-35 21-19 4S3-7 16-3S30 4 43-14S64-7 72-5S83-3 90-3"
+          class="chart-line"
+        />
+        <path d="M-88 51h40m18 0h35m20 0h62" class="screen-detail" />
+        <path d="M-137 86H137V91Q131 100 109 100H-109Q-131 100-137 91Z" class="hardware-box" />
+        <path d="M-28 86l5 5h46l5-5" class="hardware-outline" />
+        <text y="128" class="dashboard-label">
+          Oversikt og dokumentasjon
+        </text>
+      </>
+    )}
+  </g>
+</g>

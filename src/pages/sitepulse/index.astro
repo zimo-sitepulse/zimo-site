@@ -1,6 +1,7 @@
 ---
 import { site } from "../../data/site";
 import Layout from "../../layouts/Layout.astro";
+import SitePulseArchitecture from "../../components/SitePulseArchitecture.astro";
 
 const benefits = [
   {
@@ -40,13 +41,13 @@ const benefits = [
         <br />
         Oversikt som <span class="text-brand">lønner seg.</span>
       </h1>
-      <div class="mt-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+      <div class="mt-8 space-y-7">
         <p class="max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl">
           SitePulse kobler målinger til aktiv styring av byggeplassen. Optimaliser energibruken,
           følg opp avvik og samle kompatibelt utstyr fra ulike leverandører i én løsning. Bedre
           kontroll på drift og økonomi, med dokumentasjonen samlet underveis.
         </p>
-        <div class="flex flex-wrap gap-3 lg:justify-end">
+        <div class="flex flex-wrap gap-3">
           <a
             href={site.becomeCustomer}
             class="inline-flex min-h-12 items-center justify-center gap-8 rounded-[8px] bg-brand px-6 py-3.5 text-sm font-semibold text-[#111315] transition-colors hover:bg-brand-hover"
@@ -61,7 +62,8 @@ const benefits = [
           </a>
         </div>
       </div>
-      <div class="mt-16 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-6 text-xs font-medium text-white/60 lg:mt-20">
+      <SitePulseArchitecture />
+      <div class="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-6 text-xs font-medium text-white/60">
         <span>Energioptimalisering</span>
         <span>Aktiv byggeplasskontroll</span>
         <span>Leverandøruavhengighet</span>

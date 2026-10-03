@@ -1,0 +1,19 @@
+---
+interface Props {
+  d: string;
+  start: [number, number];
+  end: [number, number];
+  delay: number;
+  from: string;
+  to: string;
+}
+const { d, start, end, delay, from, to } = Astro.props;
+---
+
+<g data-from={from} data-to={to} style={`--delay: ${delay}ms`}>
+  <path d={d} pathLength="1" class="flow-line" />
+  <g class="flow-terminals">
+    <circle cx={start[0]} cy={start[1]} r="3" />
+    <circle cx={end[0]} cy={end[1]} r="3" />
+  </g>
+</g>
