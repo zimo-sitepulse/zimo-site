@@ -34,7 +34,7 @@ Disse brukerbestemte endringene går foran tidligere føringer i dokumentet:
 ## Hero – 2026-10-04
 
 - Byggeplassillustrasjonen er fjernet fra heroen og repoet etter brukerens ønske.
-- Hero-teksten bruker hele bredden. Systemillustrasjonen under partnerne beholdes.
+- Hero-teksten bruker hele bredden. På mobil har overskriften mindre skrift, sammenhengende «lønner seg», roligere avstand og to knapper i full bredde. Systemillustrasjonen under partnerne beholdes.
 - «SitePulse fra ZiMO» vises uten dekorativ gul prikk. Logoens gule prikk beholdes.
 - Nettsiden bruker SVG-ikoner, ikke emojier.
 

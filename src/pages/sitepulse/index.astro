@@ -34,26 +34,27 @@ const benefits = [
   title="SitePulse fra ZiMO – energioptimalisering og aktiv byggeplasskontroll"
   description="Energioptimalisering, aktiv byggeplasskontroll og leverandøruavhengighet. SitePulse gir bedre grunnlag for styring og økonomi på byggeplassen."
 >
-  <section class="overflow-hidden bg-[#111315] pb-16 pt-16 text-white sm:pt-24 lg:pb-20 lg:pt-28">
+  <section class="overflow-hidden bg-[#111315] py-12 text-white sm:pb-16 sm:pt-24 lg:pb-20 lg:pt-28">
     <div class="zimo-shell">
       <p class="text-xs font-semibold uppercase tracking-[0.16em] text-white/65">
         SitePulse fra ZiMO
       </p>
-      <h1 class="mt-8 max-w-5xl text-[clamp(2.6rem,6.5vw,6rem)] font-semibold leading-[1.04] tracking-[-0.05em]">
-        Data som gir oversikt.
-        <br />
-        Oversikt som <span class="text-brand">lønner seg.</span>
+      <h1 class="hero-title mt-6 max-w-5xl font-semibold sm:mt-8">
+        <span class="block">Data som gir oversikt.</span>
+        <span class="block">
+          Oversikt som <span class="whitespace-nowrap text-brand">lønner seg.</span>
+        </span>
       </h1>
-      <div class="mt-8 space-y-7">
-        <p class="max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl">
+      <div class="mt-6 space-y-7 sm:mt-8">
+        <p class="max-w-2xl text-base leading-[1.7] text-white/70 sm:text-xl sm:leading-relaxed">
           SitePulse kobler målinger til aktiv styring av byggeplassen. Optimaliser energibruken,
           følg opp avvik og samle kompatibelt utstyr fra ulike leverandører i én løsning. Bedre
           kontroll på drift og økonomi, med dokumentasjonen samlet underveis.
         </p>
-        <div class="flex flex-wrap gap-3">
+        <div class="grid gap-3 sm:flex sm:flex-wrap">
           <a
             href={site.becomeCustomer}
-            class="inline-flex min-h-12 items-center justify-center gap-8 rounded-[8px] bg-brand px-6 py-3.5 text-sm font-semibold text-[#111315] transition-colors hover:bg-brand-hover"
+            class="inline-flex min-h-12 items-center justify-between gap-8 rounded-[8px] bg-brand px-5 py-3.5 text-sm font-semibold text-[#111315] transition-colors hover:bg-brand-hover sm:justify-center sm:px-6"
           >
             Bli kunde <ArrowIcon direction="diagonal" />
           </a>
@@ -200,3 +201,19 @@ const benefits = [
     </div>
   </section>
 </Layout>
+
+<style>
+  .hero-title {
+    font-size: clamp(1.875rem, 8.2vw, 3rem);
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+  }
+
+  @media (min-width: 640px) {
+    .hero-title {
+      font-size: clamp(2.6rem, 6.5vw, 6rem);
+      line-height: 1.04;
+      letter-spacing: -0.05em;
+    }
+  }
+</style>
