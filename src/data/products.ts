@@ -1,5 +1,3 @@
-import { gatewaySubscription } from "./pricing";
-
 export interface Product {
   slug: string;
   label: string;
@@ -80,8 +78,8 @@ export const products: Product[] = [
         text: "Følg tilkoblede enheter og målinger fra samme prosjekt i Cloud.",
       },
       {
-        title: gatewaySubscription.price,
-        text: `${gatewaySubscription.description} Ta kontakt for et oppsett tilpasset prosjektet.`,
+        title: "Inkludert i Build",
+        text: "Nødvendig gateway er inkludert i SitePulse Build-pakkene, sammen med standardenheter og SitePulse Cloud. Se prisoversikten for pakkene.",
       },
     ],
     comingSoon: false,

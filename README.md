@@ -24,7 +24,7 @@ npm run build
 ## Hvor endringer gjøres
 
 - `src/data/site.ts`: kontaktinformasjon, felles lenker og sosiale medier.
-- `src/data/pricing.ts`: felles prisinformasjon for prisoversikten og produktsidene.
+- `src/data/pricing.ts`: Build-pakker, månedspriser og inkludert innhold for prisoversikten.
 - `src/data/products.ts`: produkttekster, bilder og status. Hvert produkt får en side via `src/pages/produkter/[slug].astro`.
 - `src/pages/sitepulse/index.astro`: forsiden. Rotadressen videresender hit.
 - `src/components/Partners.astro`: samarbeidspartnere og lenke til Kontakt oss. Logoer ligger i `public/partners/`.

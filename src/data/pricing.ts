@@ -1,4 +1,7 @@
-export const gatewaySubscription = {
-  price: "Fra 399 kr/mnd",
-  description: "Et abonnement for tilkoblingen på byggeplassen.",
-} as const;
+export const buildPlans = [
+  { name: "SitePulse Build 10", price: "1 490", units: 10 },
+  { name: "SitePulse Build 25", price: "2 990", units: 25 },
+  { name: "SitePulse Build 50", price: "4 990", units: 50 },
+] as const;
+
+export const buildIncludes = ["SitePulse Cloud", "Nødvendig gateway"] as const;
