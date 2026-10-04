@@ -31,6 +31,14 @@ Disse brukerbestemte endringene går foran tidligere føringer i dokumentet:
 - Ferdig konfigurert levering, ingen krav om WiFi og null teknisk oppsett er et tydelig salgsbudskap: «Plug & play. Ingen WiFi. Null teknisk oppsett.» Det forklares i egen seksjon under systemillustrasjonen og gjentas på tilgjengelige produktsider. Heroen har ikke et eget punkt om dette.
 - Samarbeidspartnere vises mellom hero-teksten og systemillustrasjonen med samme mørke bakgrunn. Seksjonen er kompakt og sentrert, med liten overskrift, lys partnerlogo og en tydelig gul kontaktknapp. Ingen ekstra salgstekst. Veidekke er foreløpig eneste partner.
 
+## Hero-bilde – 2026-10-04
+
+- Brukerens byggeplassillustrasjon står til høyre for hero-teksten fra 1024 px.
+- Teksten beholder god bredde og knapper under beskrivelsen; overskriften skaleres for to kolonner.
+- Bildet vises helt, med myke sidekanter mot den mørke bakgrunnen. Det skjules på mindre skjermer.
+- Bildefilen ligger i `src/assets/sitepulse-construction-cloud.png`; Astro lager responsive WebP-varianter.
+- Dette erstatter tidligere beslutning om hero-tekst over hele bredden. Systemillustrasjonen under partnerne beholdes.
+
 ## Status
 
 - **Sist oppdatert:** 2026-10-03
