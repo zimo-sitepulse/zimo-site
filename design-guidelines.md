@@ -28,6 +28,7 @@ Disse brukerbestemte endringene går foran tidligere føringer i dokumentet:
 - Produktene har egne sider under `/produkter/`, inkludert to kommende fuktighetsmålere.
 - Kontakt oss har egen side på `/kontakt/`. Bli kunde peker til denne sidens kundeseksjon med tydelig e-postkontakt.
 - Facebook, Instagram og LinkedIn ligger i bunnteksten.
+- Samarbeidspartnere vises mellom hero-teksten og systemillustrasjonen, i en lys, sentrert seksjon med gråtonelogoer og gul kontaktknapp. Veidekke er foreløpig eneste partner.
 
 ## Status
 
