@@ -7,7 +7,7 @@ interface Props {
 }
 const { kind, position } = Astro.props;
 const cloudShape =
-  "M-88 65C-118 65-140 44-140 15C-140-9-124-29-102-35C-102-55-87-70-67-70C-57-70-48-66-42-59C-34-75-18-85 0-85C18-85 34-75 42-59C48-66 57-70 67-70C87-70 102-55 102-35C124-29 140-9 140 15C140 44 118 65 88 65Z";
+  "M-90 65C-118 65-140 43-140 15C-140-13-118-35-90-35H-70C-68-72-38-100 0-100C38-100 68-72 70-35H90C118-35 140-13 140 15C140 43 118 65 90 65Z";
 const delay = { gateway: 160, cloud: 1050, dashboard: 1450 }[kind];
 ---
 
@@ -32,7 +32,7 @@ const delay = { gateway: 160, cloud: 1050, dashboard: 1450 }[kind];
         <path d={cloudShape} class="cloud-glow" />
         <path d={cloudShape} class="cloud-outline" />
         <!-- Center the combined logo and label within the cloud, including its upper dome. -->
-        <g transform="translate(0 -15)">
+        <g transform="translate(0 -24)">
           <ZimoMark />
           <text y="38" class="cloud-label">
             SitePulse Cloud
