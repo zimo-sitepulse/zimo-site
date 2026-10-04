@@ -69,7 +69,10 @@ export const products: Product[] = [
     description:
       "Gatewayen samler kompatible sensorer og utstyr i SitePulse Cloud via LTE. Det gir grunnlag for aktiv styring og energioptimalisering, med frihet til å velge utstyr fra ulike leverandører. Vi avklarer kompatibiliteten som del av oppsettet.",
     details: [
-      { title: "LTE", text: "Gatewayen bruker mobilnettet for å holde SitePulse Cloud oppdatert." },
+      {
+        title: "Ingen WiFi nødvendig",
+        text: "Gatewayen leveres ferdig satt opp og bruker mobilnettet for å holde SitePulse Cloud oppdatert. Koble til strøm, så er dere i gang.",
+      },
       {
         title: "Samlet oversikt",
         text: "Følg tilkoblede enheter og målinger fra samme prosjekt i Cloud.",

@@ -1,8 +1,9 @@
 ---
-import { site } from "../../data/site";
+import { site, readyToUse } from "../../data/site";
 import Layout from "../../layouts/Layout.astro";
 import SitePulseArchitecture from "../../components/SitePulseArchitecture.astro";
 import Partners from "../../components/Partners.astro";
+import ReadyToUse from "../../components/ReadyToUse.astro";
 
 const benefits = [
   {
@@ -48,6 +49,10 @@ const benefits = [
           følg opp avvik og samle kompatibelt utstyr fra ulike leverandører i én løsning. Bedre
           kontroll på drift og økonomi, med dokumentasjonen samlet underveis.
         </p>
+        <p class="flex items-start gap-3 text-base font-semibold text-white/90">
+          <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" aria-hidden="true"></span>
+          {readyToUse.summary}
+        </p>
         <div class="flex flex-wrap gap-3">
           <a
             href={site.becomeCustomer}
@@ -82,6 +87,8 @@ const benefits = [
       </div>
     </div>
   </section>
+
+  <ReadyToUse />
 
   <section
     class="border-b border-[#D4D8D5] bg-[#F5F5F2] py-16 lg:py-24"

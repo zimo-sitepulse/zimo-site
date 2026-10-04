@@ -28,6 +28,7 @@ Disse brukerbestemte endringene går foran tidligere føringer i dokumentet:
 - Produktene har egne sider under `/produkter/`, inkludert to kommende fuktighetsmålere.
 - Kontakt oss har egen side på `/kontakt/`. Bli kunde peker til denne sidens kundeseksjon med tydelig e-postkontakt.
 - Facebook, Instagram og LinkedIn ligger i bunnteksten.
+- Ferdig konfigurert levering, ingen krav om WiFi og null teknisk oppsett er et tydelig salgsbudskap: «Plug & play. Ingen WiFi. Null teknisk oppsett.» Det vises i heroen, forklares under systemillustrasjonen og gjentas på tilgjengelige produktsider.
 - Samarbeidspartnere vises mellom hero-teksten og systemillustrasjonen med samme mørke bakgrunn. Seksjonen er kompakt og sentrert, med liten overskrift, lys partnerlogo og en tydelig gul kontaktknapp. Ingen ekstra salgstekst. Veidekke er foreløpig eneste partner.
 
 ## Status

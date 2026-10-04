@@ -1,5 +1,5 @@
 ---
-import { site, contactHref } from "../../data/site";
+import { site, contactHref, readyToUse } from "../../data/site";
 import Layout from "../../layouts/Layout.astro";
 import { products, productHref, type Product } from "../../data/products";
 
@@ -37,6 +37,12 @@ const otherProducts = products.filter((item) => item.slug !== product.slug);
           <p class="mt-5 max-w-2xl text-base leading-relaxed text-[#68767A]">
             {product.description}
           </p>
+          {!product.comingSoon && (
+            <div class="mt-6 max-w-2xl border-l-2 border-brand pl-4">
+              <p class="font-semibold">{readyToUse.title}</p>
+              <p class="mt-1 text-sm leading-relaxed text-[#566267]">{readyToUse.summary}</p>
+            </div>
+          )}
           <a
             href={contactHref(`SitePulse – ${product.label}`)}
             class="mt-9 inline-flex min-h-11 items-center justify-center rounded-[8px] bg-brand px-6 py-3 text-sm font-semibold text-[#111315] transition-colors hover:bg-brand-hover"
