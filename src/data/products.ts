@@ -1,3 +1,5 @@
+import { gatewaySubscription } from "./pricing";
+
 export interface Product {
   slug: string;
   label: string;
@@ -78,8 +80,8 @@ export const products: Product[] = [
         text: "Følg tilkoblede enheter og målinger fra samme prosjekt i Cloud.",
       },
       {
-        title: "Fra 399 kr/mnd",
-        text: "Et abonnement for tilkoblingen på byggeplassen. Ta kontakt for et oppsett tilpasset prosjektet.",
+        title: gatewaySubscription.price,
+        text: `${gatewaySubscription.description} Ta kontakt for et oppsett tilpasset prosjektet.`,
       },
     ],
     comingSoon: false,

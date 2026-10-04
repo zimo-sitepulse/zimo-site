@@ -3,6 +3,7 @@ export const site = {
   home: "/sitepulse/",
   contact: "/kontakt/",
   breeam: "/breeam-nor/",
+  pricing: "/prisoversikt/",
   becomeCustomer: "/kontakt/#bli-kunde",
   cloud: "https://sitepulse.zimo.no",
   contactName: "Mads Falk",

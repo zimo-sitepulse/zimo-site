@@ -1,6 +1,6 @@
 # ZiMO-nettsiden
 
-Norskspråklig Astro-nettside for SitePulse, med forside, fem produktsider, BREEAM-NOR-side og egen kontaktside. Publiseres på GitHub Pages på [zimo.no](https://zimo.no).
+Norskspråklig Astro-nettside for SitePulse, med forside, fem produktsider, BREEAM-NOR-side, prisoversikt og egen kontaktside. Publiseres på GitHub Pages på [zimo.no](https://zimo.no).
 
 ## Lokal utvikling
 
@@ -24,6 +24,7 @@ npm run build
 ## Hvor endringer gjøres
 
 - `src/data/site.ts`: kontaktinformasjon, felles lenker og sosiale medier.
+- `src/data/pricing.ts`: felles prisinformasjon for prisoversikten og produktsidene.
 - `src/data/products.ts`: produkttekster, bilder og status. Hvert produkt får en side via `src/pages/produkter/[slug].astro`.
 - `src/pages/sitepulse/index.astro`: forsiden. Rotadressen videresender hit.
 - `src/components/Partners.astro`: samarbeidspartnere og lenke til Kontakt oss. Logoer ligger i `public/partners/`.
