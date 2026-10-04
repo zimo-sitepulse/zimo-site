@@ -11,12 +11,14 @@ const activeProduct = products.find(
 );
 ---
 
-<details class:list={["product-menu relative text-white", { "px-3": mobile }]}>
+<details class:list={["product-menu relative", { "px-3": mobile }]}>
   <summary
     class:list={[
-      "flex cursor-pointer list-none items-center gap-2 rounded-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-4",
+      "flex cursor-pointer list-none items-center gap-2 rounded-sm font-medium transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-4",
       mobile ? "py-3" : "min-h-10 border-b-2 py-2",
-      activeProduct ? "border-brand text-brand" : "border-transparent",
+      activeProduct
+        ? "border-brand text-brand"
+        : "border-transparent text-white/70 hover:text-white",
       { "underline decoration-brand decoration-2 underline-offset-8": mobile && activeProduct },
     ]}
   >
