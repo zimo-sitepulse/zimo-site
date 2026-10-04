@@ -1,0 +1,24 @@
+---
+interface Props {
+  direction?: "right" | "left" | "diagonal";
+}
+const { direction = "right" } = Astro.props;
+const paths = {
+  right: "M5 12h14m-6-6 6 6-6 6",
+  left: "M19 12H5m6-6-6 6 6 6",
+  diagonal: "M7 17 17 7M7 7h10v10",
+};
+---
+
+<svg
+  class="inline-block h-4 w-4 shrink-0 align-middle"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.75"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+>
+  <path d={paths[direction]} />
+</svg>

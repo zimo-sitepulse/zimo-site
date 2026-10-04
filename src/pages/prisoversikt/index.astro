@@ -1,4 +1,5 @@
 ---
+import ArrowIcon from "../../components/ArrowIcon.astro";
 import Layout from "../../layouts/Layout.astro";
 import { site, readyToUse } from "../../data/site";
 import PricingCard from "../../components/PricingCard.astro";
@@ -90,7 +91,7 @@ import { buildPlans, buildTerms } from "../../data/pricing";
         href={site.contact}
         class="inline-flex min-h-12 items-center justify-center gap-8 justify-self-start rounded-[8px] bg-brand px-6 py-3.5 text-sm font-semibold text-[#111315] transition-colors hover:bg-brand-hover md:justify-self-end"
       >
-        Kontakt oss for et tilbud <span aria-hidden="true">↗</span>
+        Kontakt oss for et tilbud <ArrowIcon direction="diagonal" />
       </a>
     </div>
   </section>

@@ -1,4 +1,5 @@
 ---
+import ArrowIcon from "../../components/ArrowIcon.astro";
 import Layout from "../../layouts/Layout.astro";
 import { site, contactHref } from "../../data/site";
 
@@ -112,7 +113,7 @@ const sources = {
             href="/produkter/temperatur-luftfuktighet/"
             class="mt-5 inline-flex min-h-11 items-center text-sm font-semibold underline underline-offset-4 transition-colors hover:text-[#68767A]"
           >
-            Se temperatur- og luftfuktighetssensoren →
+            Se temperatur- og luftfuktighetssensoren <ArrowIcon direction="right" />
           </a>
         </div>
         <div class="rounded-[8px] bg-[#F5F5F2] p-5 sm:p-6">
@@ -138,7 +139,7 @@ const sources = {
             class="rounded-[8px] border border-[#D4D8D5] p-5 transition-colors hover:bg-[#fff8cc]"
           >
             <span class="block font-semibold">
-              Betong · NS 3511 <span aria-hidden="true">→</span>
+              Betong · NS 3511 <ArrowIcon direction="right" />
             </span>
             <span class="mt-2 block text-sm leading-relaxed text-[#566267]">
               Utvikles for måling av relativ fuktighet i borehull før overflatebelegg.
@@ -149,7 +150,7 @@ const sources = {
             class="rounded-[8px] border border-[#D4D8D5] p-5 transition-colors hover:bg-[#fff8cc]"
           >
             <span class="block font-semibold">
-              Tre · NS 3512 <span aria-hidden="true">→</span>
+              Tre · NS 3512 <ArrowIcon direction="right" />
             </span>
             <span class="mt-2 block text-sm leading-relaxed text-[#566267]">
               Utvikles for måling av fukt i trekonstruksjoner før innbygging.
@@ -183,7 +184,7 @@ const sources = {
               rel="noopener noreferrer"
               class="inline-flex min-h-11 items-center underline underline-offset-4 hover:text-[#68767A]"
             >
-              Man 03 – Grønn Byggallianse ↗
+              Man 03 – Grønn Byggallianse <ArrowIcon direction="diagonal" />
             </a>
           </li>
           <li>
@@ -193,7 +194,7 @@ const sources = {
               rel="noopener noreferrer"
               class="inline-flex min-h-11 items-center underline underline-offset-4 hover:text-[#68767A]"
             >
-              Mat 05 – Grønn Byggallianse ↗
+              Mat 05 – Grønn Byggallianse <ArrowIcon direction="diagonal" />
             </a>
           </li>
           <li>
@@ -203,7 +204,7 @@ const sources = {
               rel="noopener noreferrer"
               class="inline-flex min-h-11 items-center underline underline-offset-4 hover:text-[#68767A]"
             >
-              NS 3511 og NS 3512 – Standard Norge ↗
+              NS 3511 og NS 3512 – Standard Norge <ArrowIcon direction="diagonal" />
             </a>
           </li>
         </ul>
@@ -229,7 +230,7 @@ const sources = {
           Snakk med oss om prosjektet
         </a>
         <a href={site.contact} class="mt-4 block text-sm underline underline-offset-4">
-          Se kontaktinformasjon →
+          Se kontaktinformasjon <ArrowIcon direction="right" />
         </a>
       </div>
     </div>

@@ -1,4 +1,5 @@
 ---
+import ArrowIcon from "../../components/ArrowIcon.astro";
 import { site, contactHref, readyToUse } from "../../data/site";
 import Layout from "../../layouts/Layout.astro";
 import { products, productHref, type Product } from "../../data/products";
@@ -20,7 +21,7 @@ const otherProducts = products.filter((item) => item.slug !== product.slug);
         href={site.home}
         class="text-sm text-[#566267] underline decoration-[#BFC6C3] underline-offset-4 hover:text-[#111315]"
       >
-        ← Tilbake til SitePulse
+        <ArrowIcon direction="left" /> Tilbake til SitePulse
       </a>
       <div class:list={["mt-12 grid gap-12", product.image && "lg:grid-cols-2 lg:items-center"]}>
         <div class="max-w-3xl">
@@ -90,7 +91,7 @@ const otherProducts = products.filter((item) => item.slug !== product.slug);
             class="flex flex-wrap items-center justify-between gap-3 rounded-[8px] border border-[#D4D8D5] bg-white px-5 py-4 text-sm font-medium transition-colors hover:bg-[#fff8cc]"
           >
             <span>
-              {item.label} <span aria-hidden="true">→</span>
+              {item.label} <ArrowIcon direction="right" />
             </span>
             {item.comingSoon && <span class="text-xs text-[#68767A]">Kommer snart</span>}
           </a>

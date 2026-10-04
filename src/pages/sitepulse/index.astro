@@ -1,4 +1,5 @@
 ---
+import ArrowIcon from "../../components/ArrowIcon.astro";
 import { site } from "../../data/site";
 import Layout from "../../layouts/Layout.astro";
 import SitePulseArchitecture from "../../components/SitePulseArchitecture.astro";
@@ -54,7 +55,7 @@ const benefits = [
             href={site.becomeCustomer}
             class="inline-flex min-h-12 items-center justify-center gap-8 rounded-[8px] bg-brand px-6 py-3.5 text-sm font-semibold text-[#111315] transition-colors hover:bg-brand-hover"
           >
-            Bli kunde <span aria-hidden="true">↗</span>
+            Bli kunde <ArrowIcon direction="diagonal" />
           </a>
           <a
             href="#slik-fungerer-det"
@@ -168,7 +169,7 @@ const benefits = [
           href={site.breeam}
           class="mt-6 inline-flex min-h-11 items-center gap-4 font-semibold underline decoration-[#BFC6C3] underline-offset-4 transition-colors hover:text-[#68767A]"
         >
-          Se vår BREEAM-NOR-støtte <span aria-hidden="true">→</span>
+          Se vår BREEAM-NOR-støtte <ArrowIcon direction="right" />
         </a>
       </div>
     </div>
@@ -193,7 +194,7 @@ const benefits = [
           href={site.becomeCustomer}
           class="mt-7 inline-flex min-h-12 items-center justify-center gap-8 rounded-[8px] bg-[#111315] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#30373A]"
         >
-          La oss ta en prat <span aria-hidden="true">↗</span>
+          La oss ta en prat <ArrowIcon direction="diagonal" />
         </a>
       </div>
     </div>
