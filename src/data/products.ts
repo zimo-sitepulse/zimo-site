@@ -13,47 +13,16 @@ export function productHref(product: Pick<Product, "slug">): string {
   return `/produkter/${product.slug}/`;
 }
 
+export const productNames = {
+  gateway: "Gateway",
+  temperature: "Temperatur & Fukt",
+  control: "Strømstyring",
+  concrete: "Betongfukt",
+  timber: "Trefukt",
+  cloud: "Cloud",
+} as const;
+
 export const products: Product[] = [
-  {
-    slug: "temperatur-luftfuktighet",
-    label: "Temp/luftfuktighet",
-    title: "Temperatur og luftfuktighet",
-    intro: "Målinger som gir grunnlag for smartere byggvarme og aktiv oppfølging.",
-    description:
-      "Bruk temperatur og luftfuktighet som grunnlag for energioptimalisering og aktiv byggeplasskontroll. Følg forholdene, tilpass byggvarmen og behold historikken gjennom prosjektet.",
-    details: [
-      {
-        title: "Oversikt",
-        text: "Se målingene i SitePulse Cloud sammen med resten av prosjektet.",
-      },
-      {
-        title: "Historikk",
-        text: "Følg utviklingen over tid og bruk målingene i oppfølgingen av byggeplassen.",
-      },
-      { title: "Varsling", text: "Sett grenser for når forholdene trenger oppmerksomhet." },
-    ],
-    comingSoon: false,
-  },
-  {
-    slug: "stromstopsel",
-    label: "Strømstøpsel",
-    title: "Strømstøpsel",
-    intro: "Styr tilkoblet utstyr etter behov og begrens unødvendig energibruk.",
-    description:
-      "Gjør energioptimalisering til en del av den daglige driften. Med målinger og regler i SitePulse kan strømstøpselet styre kompatibelt utstyr etter behov og redusere tiden det står på unødvendig.",
-    details: [
-      { title: "Styring", text: "Samle oppfølgingen av tilkoblet utstyr i SitePulse Cloud." },
-      {
-        title: "Automasjon",
-        text: "Bruk regler for å knytte styring til målt temperatur på byggeplassen.",
-      },
-      {
-        title: "Tilpasset utstyret",
-        text: "Ta kontakt for å avklare hvilken løsning som passer utstyret dere ønsker å styre.",
-      },
-    ],
-    comingSoon: false,
-  },
   {
     slug: "gateway",
     image: {
@@ -63,8 +32,8 @@ export const products: Product[] = [
       height: 1024,
       caption: "Produktillustrasjon · SitePulse Gateway",
     },
-    label: "Gateway",
-    title: "SitePulse Gateway",
+    label: productNames.gateway,
+    title: productNames.gateway,
     intro: "Knytt kompatibelt utstyr til én samlet byggeplasskontroll.",
     description:
       "Gatewayen samler kompatible sensorer og utstyr i SitePulse Cloud via LTE. Det gir grunnlag for aktiv styring og energioptimalisering, med frihet til å velge utstyr fra ulike leverandører. Vi avklarer kompatibiliteten som del av oppsettet.",
@@ -85,9 +54,49 @@ export const products: Product[] = [
     comingSoon: false,
   },
   {
+    slug: "temperatur-luftfuktighet",
+    label: productNames.temperature,
+    title: productNames.temperature,
+    intro: "Målinger som gir grunnlag for smartere byggvarme og aktiv oppfølging.",
+    description:
+      "Bruk temperatur og luftfuktighet som grunnlag for energioptimalisering og aktiv byggeplasskontroll. Følg forholdene, tilpass byggvarmen og behold historikken gjennom prosjektet.",
+    details: [
+      {
+        title: "Oversikt",
+        text: "Se målingene i SitePulse Cloud sammen med resten av prosjektet.",
+      },
+      {
+        title: "Historikk",
+        text: "Følg utviklingen over tid og bruk målingene i oppfølgingen av byggeplassen.",
+      },
+      { title: "Varsling", text: "Sett grenser for når forholdene trenger oppmerksomhet." },
+    ],
+    comingSoon: false,
+  },
+  {
+    slug: "stromstopsel",
+    label: productNames.control,
+    title: productNames.control,
+    intro: "Styr tilkoblet utstyr etter behov og begrens unødvendig energibruk.",
+    description:
+      "Gjør energioptimalisering til en del av den daglige driften. Med målinger og regler i SitePulse kan Strømstyring styre kompatibelt utstyr etter behov og redusere tiden det står på unødvendig.",
+    details: [
+      { title: "Styring", text: "Samle oppfølgingen av tilkoblet utstyr i SitePulse Cloud." },
+      {
+        title: "Automasjon",
+        text: "Bruk regler for å knytte styring til målt temperatur på byggeplassen.",
+      },
+      {
+        title: "Tilpasset utstyret",
+        text: "Ta kontakt for å avklare hvilken løsning som passer utstyret dere ønsker å styre.",
+      },
+    ],
+    comingSoon: false,
+  },
+  {
     slug: "fuktighetsmaler-betong",
-    label: "Fuktighetsmåler i betong",
-    title: "Fuktighetsmåler i betong",
+    label: productNames.concrete,
+    title: productNames.concrete,
     intro: "Fuktmåling i betong. Kommer snart til SitePulse.",
     description:
       "Vi utvikler en sensor for måling av relativ fuktighet i betong i henhold til NS 3511. Sensoren skal gi måledata til oppfølging av uttørking og fuktdokumentasjon i SitePulse.",
@@ -109,8 +118,8 @@ export const products: Product[] = [
   },
   {
     slug: "fuktighetsmaler-tre",
-    label: "Fuktighetsmåler i tre",
-    title: "Fuktighetsmåler i tre",
+    label: productNames.timber,
+    title: productNames.timber,
     intro: "Fuktmåling i tre. Kommer snart til SitePulse.",
     description:
       "Vi utvikler en sensor for måling av fukt i trekonstruksjoner i henhold til NS 3512. Sensoren skal gi måledata til oppfølging av materialfukt og fuktdokumentasjon i SitePulse.",

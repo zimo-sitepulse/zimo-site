@@ -1,17 +1,27 @@
+import { productNames } from "../../data/products";
+
 export type SensorId = "concrete" | "timber" | "temperature" | "control" | "equipment";
 export type NodeId = SensorId | "gateway" | "cloud" | "dashboard";
 type SourceId = Exclude<NodeId, "dashboard">;
 export type Position = { x: number; y: number; scale?: number };
 
 export const sensors: { id: SensorId; label: string; icon: string }[] = [
-  { id: "concrete", label: "Betongfukt", icon: "M12 2C9 7 4 11 4 16a8 8 0 0 0 16 0c0-5-5-9-8-14Z" },
-  { id: "timber", label: "Trefukt", icon: "m12 2-6 8h3l-5 7h6v5h4v-5h6l-5-7h3Z" },
+  {
+    id: "concrete",
+    label: productNames.concrete,
+    icon: "M12 2C9 7 4 11 4 16a8 8 0 0 0 16 0c0-5-5-9-8-14Z",
+  },
+  { id: "timber", label: productNames.timber, icon: "m12 2-6 8h3l-5 7h6v5h4v-5h6l-5-7h3Z" },
   {
     id: "temperature",
-    label: "Temperatur",
+    label: productNames.temperature,
     icon: "M9 14.5V5a3 3 0 0 1 6 0v9.5a5 5 0 1 1-6 0ZM12 8v9",
   },
-  { id: "control", label: "Styring", icon: "M8 2v7m8-7v7M6 9h12v5a6 6 0 0 1-12 0V9Zm6 11v3" },
+  {
+    id: "control",
+    label: productNames.control,
+    icon: "M8 2v7m8-7v7M6 9h12v5a6 6 0 0 1-12 0V9Zm6 11v3",
+  },
   {
     id: "equipment",
     label: "Annet utstyr",

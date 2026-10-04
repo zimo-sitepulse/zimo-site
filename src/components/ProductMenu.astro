@@ -1,5 +1,7 @@
 ---
-import { products, productHref } from "../data/products";
+import { products, productHref, productNames } from "../data/products";
+import { site } from "../data/site";
+import ArrowIcon from "./ArrowIcon.astro";
 
 interface Props {
   mobile?: boolean;
@@ -59,6 +61,18 @@ const activeProduct = products.find(
         </a>
       </li>
     ))}
+    <li class="mt-1 border-t border-[#D4D8D5] pt-1">
+      <a
+        href={site.cloud}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex min-h-11 items-center justify-between gap-2 rounded-sm border-l-2 border-transparent px-3 py-3 font-medium transition-colors hover:bg-[#fff8cc]"
+        aria-label="Cloud (åpnes i ny fane)"
+      >
+        {productNames.cloud}
+        <ArrowIcon direction="diagonal" />
+      </a>
+    </li>
   </ul>
 </details>
 <style>
