@@ -19,9 +19,9 @@ const id = `architecture-${crypto.randomUUID()}`;
     >
       <title id={`${id}-${layout.name}-title`}>Slik henger SitePulse sammen</title>
       <desc id={`${id}-${layout.name}-description`}>
-        Betongfukt og trefukt sender direkte til SitePulse Cloud. Temperatur &amp; Fukt,
-        Strømstyring og annet kompatibelt utstyr kobles via SitePulse Gateway. Cloud samler dataene
-        og gir oversikt og dokumentasjon i dashboardet.
+        Betongfukt og trefukt sender direkte til SitePulse Cloud. Temperatur &amp; Fukt og
+        Strømstyring kobles via SitePulse Gateway. Cloud samler dataene og gir oversikt og
+        dokumentasjon i dashboardet.
       </desc>
       {connections.map((connection) => (
         <Connection {...connection} {...layout.paths[connection.from]} />

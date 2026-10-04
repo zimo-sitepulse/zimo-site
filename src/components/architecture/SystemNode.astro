@@ -7,7 +7,7 @@ interface Props {
 }
 const { kind, position } = Astro.props;
 const cloudShape =
-  "M-90 65C-125 65-143 40-140 12C-137-16-116-32-91-32C-77-73-44-89-11-82C22-79 44-56 49-28C90-31 118-8 118 24C118 49 99 65 74 65Z";
+  "M-88 65C-118 65-140 44-140 15C-140-14-117-37-88-37C-81-69-43-85 0-85C43-85 81-69 88-37C117-37 140-14 140 15C140 44 118 65 88 65Z";
 const delay = { gateway: 160, cloud: 1050, dashboard: 1450 }[kind];
 ---
 
@@ -31,10 +31,13 @@ const delay = { gateway: 160, cloud: 1050, dashboard: 1450 }[kind];
       <>
         <path d={cloudShape} class="cloud-glow" />
         <path d={cloudShape} class="cloud-outline" />
-        <ZimoMark />
-        <text x="-10" y="38" class="cloud-label">
-          SitePulse Cloud
-        </text>
+        <!-- Center the combined logo and label within the cloud, including its upper dome. -->
+        <g transform="translate(0 -15)">
+          <ZimoMark />
+          <text y="38" class="cloud-label">
+            SitePulse Cloud
+          </text>
+        </g>
       </>
     )}
     {kind === "dashboard" && (

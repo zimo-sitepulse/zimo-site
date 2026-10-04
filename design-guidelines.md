@@ -38,6 +38,12 @@ Disse brukerbestemte endringene går foran tidligere føringer i dokumentet:
 - «SitePulse fra ZiMO» vises uten dekorativ gul prikk. Logoens gule prikk beholdes.
 - Nettsiden bruker SVG-ikoner, ikke emojier.
 
+## Systemillustrasjon – 2026-10-05
+
+- «Annet utstyr» og tilhørende forbindelser er fjernet på PC og mobil.
+- Skyformen er symmetrisk; logo og tekst er sentrert som én blokk i selve skyen.
+- Linjene stopper med luft før skyens kant. Mobilradene har to enheter hver.
+
 ## Status
 
 - **Sist oppdatert:** 2026-10-03
