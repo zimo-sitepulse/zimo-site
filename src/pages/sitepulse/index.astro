@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import constructionCloud from "../../assets/sitepulse-construction-cloud.png";
 import { site } from "../../data/site";
 import Layout from "../../layouts/Layout.astro";
 import SitePulseArchitecture from "../../components/SitePulseArchitecture.astro";
@@ -34,36 +36,51 @@ const benefits = [
   description="Energioptimalisering, aktiv byggeplasskontroll og leverandøruavhengighet. SitePulse gir bedre grunnlag for styring og økonomi på byggeplassen."
 >
   <section class="overflow-hidden bg-[#111315] pb-16 pt-16 text-white sm:pt-24 lg:pb-20 lg:pt-28">
-    <div class="zimo-shell">
-      <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-white/65">
-        <span class="h-2 w-2 rounded-full bg-brand" aria-hidden="true"></span>SitePulse fra ZiMO
-      </p>
-      <h1 class="mt-8 max-w-5xl text-[clamp(2.6rem,6.5vw,6rem)] font-semibold leading-[1.04] tracking-[-0.05em]">
-        Data som gir oversikt.
-        <br />
-        Oversikt som <span class="text-brand">lønner seg.</span>
-      </h1>
-      <div class="mt-8 space-y-7">
-        <p class="max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl">
-          SitePulse kobler målinger til aktiv styring av byggeplassen. Optimaliser energibruken,
-          følg opp avvik og samle kompatibelt utstyr fra ulike leverandører i én løsning. Bedre
-          kontroll på drift og økonomi, med dokumentasjonen samlet underveis.
+    <div class="zimo-shell sitepulse-hero">
+      <div class="sitepulse-hero-copy">
+        <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-white/65">
+          <span class="h-2 w-2 rounded-full bg-brand" aria-hidden="true"></span>SitePulse fra ZiMO
         </p>
-        <div class="flex flex-wrap gap-3">
-          <a
-            href={site.becomeCustomer}
-            class="inline-flex min-h-12 items-center justify-center gap-8 rounded-[8px] bg-brand px-6 py-3.5 text-sm font-semibold text-[#111315] transition-colors hover:bg-brand-hover"
-          >
-            Bli kunde <span aria-hidden="true">↗</span>
-          </a>
-          <a
-            href="#slik-fungerer-det"
-            class="inline-flex min-h-12 items-center justify-center rounded-[8px] border border-white/30 px-6 py-3.5 text-sm font-medium transition-colors hover:bg-white/10"
-          >
-            Se hvordan det fungerer
-          </a>
+        <h1 class="mt-8 max-w-5xl text-[clamp(2.6rem,4.2vw,4.5rem)] font-semibold leading-[1.04] tracking-[-0.05em]">
+          Data som gir oversikt.
+          <br />
+          Oversikt som <span class="text-brand">lønner seg.</span>
+        </h1>
+        <div class="mt-8 space-y-7">
+          <p class="max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl">
+            SitePulse kobler målinger til aktiv styring av byggeplassen. Optimaliser energibruken,
+            følg opp avvik og samle kompatibelt utstyr fra ulike leverandører i én løsning. Bedre
+            kontroll på drift og økonomi, med dokumentasjonen samlet underveis.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href={site.becomeCustomer}
+              class="inline-flex min-h-12 items-center justify-center gap-8 rounded-[8px] bg-brand px-6 py-3.5 text-sm font-semibold text-[#111315] transition-colors hover:bg-brand-hover"
+            >
+              Bli kunde <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              href="#slik-fungerer-det"
+              class="inline-flex min-h-12 items-center justify-center rounded-[8px] border border-white/30 px-6 py-3.5 text-sm font-medium transition-colors hover:bg-white/10"
+            >
+              Se hvordan det fungerer
+            </a>
+          </div>
         </div>
       </div>
+      <figure class="sitepulse-hero-image">
+        <Image
+          src={constructionCloud}
+          alt="Illustrasjon av en byggeplass med sensorer og byggvarme koblet til SitePulse Cloud."
+          widths={[640, 960, 1280, 1672]}
+          sizes="(min-width: 1280px) 720px, (min-width: 1024px) 55vw, 1px"
+          format="webp"
+          quality={85}
+          loading="eager"
+          decoding="async"
+          class="h-auto w-full"
+        />
+      </figure>
     </div>
   </section>
 
@@ -199,3 +216,38 @@ const benefits = [
     </div>
   </section>
 </Layout>
+
+<style>
+  .sitepulse-hero-image {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .sitepulse-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+      align-items: center;
+      gap: clamp(2rem, 4vw, 4rem);
+    }
+
+    .sitepulse-hero-copy h1 {
+      font-size: clamp(2.25rem, 3.5vw, 3rem);
+    }
+
+    .sitepulse-hero-copy {
+      position: relative;
+      z-index: 1;
+    }
+
+    .sitepulse-hero-image {
+      display: block;
+      width: calc(100% + 2rem);
+      margin: 0;
+    }
+
+    .sitepulse-hero-image img {
+      display: block;
+      mask-image: linear-gradient(to right, transparent, black 8%, black 94%, transparent);
+    }
+  }
+</style>
