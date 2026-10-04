@@ -41,7 +41,7 @@ Disse brukerbestemte endringene går foran tidligere føringer i dokumentet:
 ## Systemillustrasjon – 2026-10-05
 
 - «Annet utstyr» og tilhørende forbindelser er fjernet på PC og mobil.
-- Skyformen er symmetrisk; logo og tekst er sentrert som én blokk i selve skyen.
+- Skyformen har tre avrundede skytopper og er symmetrisk; logo og tekst er sentrert som én blokk i selve skyen.
 - Linjene stopper med luft før skyens kant. Mobilradene har to enheter hver.
 
 ## Status
