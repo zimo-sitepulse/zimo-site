@@ -5,3 +5,8 @@ export const buildPlans = [
 ] as const;
 
 export const buildIncludes = ["SitePulse Cloud", "Nødvendig gateway"] as const;
+
+export const buildTerms = {
+  minimumPeriod: "3 måneder",
+  startupCost: "990 kr",
+} as const;
