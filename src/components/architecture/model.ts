@@ -25,6 +25,7 @@ export const sensors: { id: SensorId; label: string; icon: string }[] = [
 ];
 
 // One topology for both layouts. Only coordinates change on small screens.
+// Cloud connection terminals sit 12 SVG units outside the outline at their crossing height.
 export const connections: { from: SourceId; to: NodeId; delay: number }[] = [
   { from: "temperature", to: "gateway", delay: 180 },
   { from: "control", to: "gateway", delay: 230 },
@@ -62,12 +63,12 @@ export const layouts: Layout[] = [
       },
       control: { d: "M115 365H286", start: [115, 365], end: [286, 365] },
       concrete: {
-        d: "M115 55H200C285 55 270 108 360 108H445C525 108 524 225 588 225",
+        d: "M115 55H200C285 55 270 108 360 108H445C525 108 489 225 553 225",
         start: [115, 55],
-        end: [588, 225],
+        end: [553, 225],
       },
-      timber: { d: "M115 155H380C474 155 462 260 540 260", start: [115, 155], end: [540, 260] },
-      gateway: { d: "M394 365H450C525 365 491 295 542 295", start: [394, 365], end: [542, 295] },
+      timber: { d: "M115 155H380C474 155 460 260 538 260", start: [115, 155], end: [538, 260] },
+      gateway: { d: "M394 365H450C525 365 497 295 548 295", start: [394, 365], end: [548, 295] },
       cloud: { d: "M842 276H910", start: [842, 276], end: [910, 276] },
     },
   },
@@ -87,9 +88,9 @@ export const layouts: Layout[] = [
       temperature: { d: "M90 278V330Q90 350 112 350H126", start: [90, 278], end: [126, 350] },
       control: { d: "M270 278V330Q270 350 248 350H234", start: [270, 278], end: [234, 350] },
       concrete: {
-        d: "M90 113H30Q16 113 16 133V529Q16 551 39 551H52",
+        d: "M90 113H30Q16 113 16 133V529Q16 551 39 551H49",
         start: [90, 113],
-        end: [52, 551],
+        end: [49, 551],
       },
       timber: {
         d: "M270 113H330Q344 113 344 133V548Q344 570 323 570H311",

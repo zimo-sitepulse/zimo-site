@@ -41,7 +41,7 @@ Disse brukerbestemte endringene går foran tidligere føringer i dokumentet:
 ## Systemillustrasjon – 2026-10-05
 
 - «Annet utstyr» og tilhørende forbindelser er fjernet på PC og mobil.
-- Skyformen er en klassisk sky med én stor rund topp og to avrundede sider, uten ekstra humper, og er symmetrisk; logo og tekst er sentrert som én blokk i selve skyen.
+- Skyformen er en klassisk skyløsningssky med én stor topp og to mindre sidebuer, uten ekstra humper. Logo og tekst er sentrert som én blokk innenfor skyens ytterkanter. Forbindelsene er tilpasset konturen med rundt 12 SVG-enheter luft.
 - Linjene stopper med luft før skyens kant. Mobilradene har to enheter hver.
 
 ## Status
