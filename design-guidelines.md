@@ -31,6 +31,13 @@ Disse brukerbestemte endringene går foran tidligere føringer i dokumentet:
 - Ferdig konfigurert levering, ingen krav om WiFi og null teknisk oppsett er et tydelig salgsbudskap: «Plug & play. Ingen WiFi. Null teknisk oppsett.» Det forklares i egen seksjon under systemillustrasjonen og gjentas på tilgjengelige produktsider. Heroen har ikke et eget punkt om dette.
 - Samarbeidspartnere vises mellom hero-teksten og systemillustrasjonen med samme mørke bakgrunn. Seksjonen er kompakt og sentrert, med liten overskrift, lys partnerlogo og en tydelig gul kontaktknapp. Ingen ekstra salgstekst. Veidekke er foreløpig eneste partner.
 
+## Hero – 2026-10-04
+
+- Byggeplassillustrasjonen er fjernet fra heroen og repoet etter brukerens ønske.
+- Hero-teksten bruker hele bredden. Systemillustrasjonen under partnerne beholdes.
+- «SitePulse fra ZiMO» vises uten dekorativ gul prikk. Logoens gule prikk beholdes.
+- Nettsiden bruker SVG-ikoner, ikke emojier.
+
 ## Status
 
 - **Sist oppdatert:** 2026-10-03
