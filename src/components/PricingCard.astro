@@ -1,0 +1,63 @@
+---
+import { buildIncludes, buildPlans } from "../data/pricing";
+import { site } from "../data/site";
+
+interface Props {
+  plan: (typeof buildPlans)[number];
+}
+
+const { plan } = Astro.props;
+---
+
+<article class="flex flex-col overflow-hidden rounded-[8px] border border-[#D4D8D5] bg-white">
+  <div class="h-1 bg-brand" aria-hidden="true"></div>
+  <div class="flex flex-1 flex-col p-6 sm:p-8">
+    <h3 class="text-xl font-semibold tracking-[-0.02em]">{plan.name}</h3>
+    <p class="mt-2 text-sm text-[#566267]">Opptil {plan.units} standardenheter</p>
+    <p class="mt-7 flex flex-wrap items-baseline gap-x-2">
+      <span class="text-5xl font-semibold tabular-nums tracking-[-0.045em]">{plan.price}</span>
+      <span class="text-sm text-[#566267]">kr/mnd</span>
+    </p>
+    <div class="mb-8 mt-7 border-t border-[#D4D8D5] pt-6">
+      <p class="text-xs font-semibold uppercase tracking-[0.12em] text-[#566267]">Inkludert</p>
+      <ul class="mt-4 space-y-3 text-sm text-[#566267]">
+        {buildIncludes.map((feature) => (
+          <li class="flex items-center gap-3">
+            <svg
+              class="h-4 w-4 shrink-0 text-[#8B7500]"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m5 12 4 4L19 6" />
+            </svg>
+            <span>{feature}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <a
+      href={site.contact}
+      aria-label={`Kontakt oss om ${plan.name}`}
+      class="mt-auto inline-flex min-h-12 cursor-pointer items-center justify-between gap-4 rounded-[8px] bg-brand px-5 py-3 text-sm font-semibold text-[#111315] transition-colors duration-200 hover:bg-brand-hover"
+    >
+      Kontakt oss
+      <svg
+        class="h-4 w-4 shrink-0"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M7 17 17 7M7 7h10v10" />
+      </svg>
+    </a>
+  </div>
+</article>
