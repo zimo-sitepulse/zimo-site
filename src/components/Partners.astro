@@ -4,20 +4,13 @@ import { site } from "../data/site";
 const partners = [{ name: "Veidekke", logo: "/partners/veidekke.svg", width: 4800, height: 1400 }];
 ---
 
-<section class="bg-white py-14 text-[#111315] sm:py-16 lg:py-20" aria-labelledby="partners-heading">
+<section class="bg-[#111315] py-8 text-white sm:py-10" aria-labelledby="partners-heading">
   <div class="zimo-shell text-center">
-    <p class="zimo-eyebrow text-[#786500]">Samarbeidspartnere</p>
-    <h2
-      id="partners-heading"
-      class="mx-auto mt-4 max-w-3xl text-3xl font-semibold leading-tight tracking-[-0.035em] sm:text-4xl"
-    >
-      Bedre løsninger gjennom samarbeid.
+    <h2 id="partners-heading" class="text-xs font-medium uppercase tracking-[0.14em] text-white/55">
+      Samarbeidspartnere
     </h2>
-    <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-[#566267] sm:text-lg">
-      Vil du være en samarbeidspartner? Bli med på å utvikle bedre løsninger for byggeplassen.
-    </p>
     <ul
-      class="my-10 flex flex-wrap items-center justify-center gap-x-16 gap-y-8 sm:my-12"
+      class="my-6 flex flex-wrap items-center justify-center gap-x-16 gap-y-8"
       aria-label="Våre samarbeidspartnere"
     >
       {partners.map((partner) => (
@@ -27,7 +20,7 @@ const partners = [{ name: "Veidekke", logo: "/partners/veidekke.svg", width: 480
             alt={partner.name}
             width={partner.width}
             height={partner.height}
-            class="h-auto w-52 max-w-full grayscale sm:w-60"
+            class="h-auto w-48 max-w-full opacity-80 brightness-0 invert sm:w-52"
             loading="lazy"
             decoding="async"
           />
@@ -36,7 +29,7 @@ const partners = [{ name: "Veidekke", logo: "/partners/veidekke.svg", width: 480
     </ul>
     <a
       href={site.contact}
-      class="inline-flex min-h-12 items-center justify-center gap-5 rounded-[8px] bg-brand px-6 py-3.5 text-sm font-semibold transition-colors hover:bg-brand-hover"
+      class="inline-flex min-h-11 items-center justify-center gap-3 text-sm text-white/60 transition-colors hover:text-white"
     >
       Bli samarbeidspartner <span aria-hidden="true">→</span>
     </a>
